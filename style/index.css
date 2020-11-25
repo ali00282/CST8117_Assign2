@@ -1,0 +1,24 @@
+body {
+background-color: #ffffff;
+}
+
+header {
+    background: #ffffff;
+    margin: 0px 0px 0px 100px;
+    padding: 0px 40px;
+}
+
+header li {
+    display: inline;
+    float: right;
+    padding: 0 10px;
+    /* align-items: center; */
+    height: 100%;
+    text-transform: lowercase;
+    /* text-decoration: none; */
+    /* -webkit-font-smoothing: antialiased; */
+    /* cursor: pointer; */
+    color: #000;
+    font-size: 15px;
+    /* margin-left: auto; */
+}
