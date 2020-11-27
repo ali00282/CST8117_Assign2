@@ -6,21 +6,18 @@
     <meta name="Student" content="Pattol Albadry">
     <meta name="email" content="alba0126@algonquinlive.com">
     <link rel="stylesheet" type="text/css" href="style/log-in.css">
-    <title>log in</title>
+    <link rel="JavaScript" type="text/JS" href="script/log-in.js">
+    <title>log in form</title>
         </head>
         <body>
-          <div>
-            <form action="/action_page.php" class="container">
-              <h1>Login</h1>
-          
-              <label for="email"><b>Email</b></label>
-              <input type="text" placeholder="Enter Email" name="email" required>
-          
-              <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
-          
-              <button type="submit" class="btn">Login</button>
-            </form>
-          </div>
+          <form class="box" action="logIn.html" method="POST">
+
+            <h1>
+              log in 
+            </h1>
+            <input type="text" name="" placeholder="Enter UserName" id="username">
+            <input type="password" name="" placeholder="Enter password" id="password">
+            <input type="submit" name="" value="log-in" onclick="validate()">
+          </form>
         </body>
         </html>
