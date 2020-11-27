@@ -1,24 +1,89 @@
-body {
-background-color: #ffffff;
+/*index page Subheader style*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: serif;
 }
 
-header {
-    background: #ffffff;
-    margin: 0px 0px 0px 100px;
-    padding: 0px 40px;
-}
-
-header li {
-    display: inline;
+.subheader {
+    display: flex;
+    background-color: #fff;
     float: right;
-    padding: 0 10px;
-    /* align-items: center; */
-    height: 100%;
-    text-transform: lowercase;
-    /* text-decoration: none; */
-    /* -webkit-font-smoothing: antialiased; */
-    /* cursor: pointer; */
-    color: #000;
+    margin-top: 5px;
+    width: 25%;
+    justify-content: space-around;
+    font-family: Helvetica, Arial, sans-serif;
     font-size: 15px;
-    /* margin-left: auto; */
 }
+
+.registration:hover {
+    font-size: 18px;
+}
+
+.logIn:hover {
+    font-size: 18px;
+}
+
+
+/*index page header style*/
+
+.header {
+    display: flex;
+    background-color: #fff;
+    float: right;
+    margin-top: 5px;
+    width: 100%;
+    justify-content: space-around;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    clear: both;
+}
+
+.categories:hover {
+    font-size: 18px;
+}
+
+.sales:hover {
+    font-size: 18px;
+}
+
+.cart:hover {
+    font-size: 18px;
+}
+
+.search {
+    ​​​​ width: 100%;
+}
+
+​​​​ .searchTerm {
+    ​​​​ width: 100%;
+    border: 3px solid #C54958;
+    border-right: none;
+    padding: 5px;
+    height: 24px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+​​​​ .searchTerm:focus {
+    ​​​​ color: #C54958;
+}
+
+​​​​ .searchButton {
+    ​​​​width: 40px;
+    height: 36px;
+    border: 1px solid black;
+    background: black;
+    text-align: right;
+    color: black;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+body {
+    background-color: green;
+}
+
+​​ ​​
