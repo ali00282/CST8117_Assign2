@@ -10,14 +10,24 @@
     <title>log in form</title>
         </head>
         <body>
-          <form class="box" action="logIn.html" method="POST">
+          <div class="center">
+            <h1>Log In</h1>
 
-            <h1>
-              log in 
-            </h1>
-            <input type="text" name="" placeholder="Enter UserName" id="username">
-            <input type="password" name="" placeholder="Enter password" id="password">
-            <input type="submit" name="" value="log-in" onclick="validate()">
-          </form>
+            <form method="POST">
+               <div class="txt_field">
+                  <input type="text" required>
+                  <label>UserName</label>
+               </div>
+               <div class="txt_field">
+                  <input type="password" required>
+                  <label>password</label>
+               </div>
+               <div class="pass">Forgot Password?</div>
+                <input type="submit" value="login">
+                <div class="signup_link">
+                  Not a member? <a href="#">signup_link</a>
+                </div>
+            </form>
+          </div>
         </body>
         </html>
