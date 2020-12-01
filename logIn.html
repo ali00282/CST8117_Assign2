@@ -3,31 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Student" content="Pattol Albadry">
-    <meta name="email" content="alba0126@algonquinlive.com">
-    <link rel="stylesheet" type="text/css" href="style/log-in.css">
-    <link rel="JavaScript" type="text/JS" href="script/log-in.js">
+    <link rel="stylesheet" type="text/css" href="style/register.css">
+    <link rel="JavaScript" type="text/JS" href="script/register.js">
     <title>log in form</title>
         </head>
-        <body>
-          <div class="center">
-            <h1>Log In</h1>
-
-            <form method="POST">
-               <div class="txt_field">
-                  <input type="text" required>
-                  <label>UserName</label>
-               </div>
-               <div class="txt_field">
-                  <input type="password" required>
-                  <label>password</label>
-               </div>
-               <div class="pass">Forgot Password?</div>
-                <input type="submit" value="login">
-                <div class="signup_link">
-                  Not a member? <a href="#">signup_link</a>
+        <body>   
+            <body>
+                <div class="container">
+                    <div class="banner" id="changeBanner">
+                        Free shipping for orders over 100$
+                    </div>
+                    <div class="myheader">
+                        <div class="logo">
+                            <img src="khaproject/images/logo1.png" alt="our Logo" id="logo">
+                        </div>
+                        <div class="header">
+                            <ul>
+                                <li class="categories"><a href="categories"> Categories</a></li>
+                                <li class="sales"><a href="sales">Sales</a></li>
+                                <li class="cart"><a href="cart">Cart</a></li>
+                                <li class="searchArea"><a href="search">Search</a></li>
+                            </ul>
+                        </div>
+                        <div class="subheader" id="subheader">
+                            <ul>
+                                <li class="registration"><a href="register.html">Register</a></li>
+                                <li class="logIn"><a href="logIn.html">Log In</a></li>
+                                <li>
+                                    <select name="languages" id="languages">
+                                        <option value="languageFr">Fr</option>
+                                        <option value="languageEn">En</option>
+                                    </select>
+                                </li>
+                                <li> <button id="light" type="light" onclick="changemode(light)">Light</button> </li>
+                                <li> <button id="dark" type="dark" onclick="changemode(dark)">Dark</button> </li>
+                            </ul>
+                        </div>
+            
+                    </div>        
+                <main>
+                    <div class="forms">
+                        <div class="form-header">
+                            <h1>Log In</h1>
+                        </div>
+                        <form class="form" id="form">
+                            <div class="form-control">
+                                <label>Username</label>
+                                <input type="text" placeholder="Florinpop17" id="username">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>Error massage</small>
+                            </div>
+    
+                            <div class="form-control">
+                                <label>Password</label>
+                                <input type="password" placeholder="password" id="password">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>Error massage</small>                       
+                            </div>
+    
+                            <button id="submit" value="submit">submit</button>
+                        </form>
+                    </div>
+            
+                </main>
+                <button class="open-button" id="open-button" onclick="openForm()">Chat</button>
+            
+                <div class="chat-popup" id="myForm">
+                    <form action="/action_page.php" class="form-container">
+                        <h1>Chat</h1>
+            
+                        <label for="msg"><b></b></label>
+                        <textarea placeholder="Type message.." name="msg" required></textarea>
+            
+                        <button type="submit" class="btn">Send</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    </form>
                 </div>
-            </form>
-          </div>
-        </body>
-        </html>
+                <footer>
+                    <div class="footer">
+                        <div class="contact">Contact Us</div>
+                        <div class="FollowUs">Follow Us</div>
+                    </div>
+                </footer>
+            </body>
+            </html>
