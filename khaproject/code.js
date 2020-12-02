@@ -57,3 +57,6 @@ function closeForm() {
     document.getElementById("open-button").style.display = "block";
     document.getElementById("myForm").style.display = "none";
 }
+
+/*cart code */
+var cartItem = document.getElementById("cart-item");
