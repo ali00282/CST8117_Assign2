@@ -1,84 +1,445 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: serif;
+}
+.container{
+  display: grid;
+}
+.myheader{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: block;
+  background-color: #fff;
+  display: flex;
+  align-items: stretch;
+}
+.banner{
+  background-color: black;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  padding: 10px;
+  font-weight: bold;
+}
+#logo{
+  width: 180px;
+  height: 180px;
+  float: left;
+  position: relative;
+}
+
+.logo{
+  flex-grow: 1;
+}
+
+.subheader {
+  background-color: #fff;
+  float: right;
+  justify-content: space-around;
+  justify-content: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  flex-grow: 2;
+  margin: auto;
+}
+.header {
+  background-color: #fff;
+  justify-content: space-around;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  flex-grow: 3;
+  margin: auto;
+}
+
+* {
+  box-sizing: border-box;
+} 
+
 body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Lucida Sans';
-      background: url(images/pexels-rakicevic-nenad-1274260.jpg); /* Photo by Rakicevic Nenad from Pexels */
-      background-size: cover;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100vh;
+  margin: 0;
+}
+
+.forms {
+  background-color: lightgray;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 400px;
+  max-width: 100%;
+}
+
+.form-header {
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #F0F0F0;
+  padding: 20px 40px;
+}
+
+.form-header h2 {
+  margin: 0;
+}
+
+form {
+  padding: 30px 40px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  width: 100%;
+}
+
+.form-control.success input {
+  border-color: #2ecc71;
+}
+
+.form-control.error input {
+  border-color: #e74c3c;
+}
+
+.form-control i {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  visibility: hidden;
+}
+
+.form-control.success i.fa-check-circle {
+  columns: #2ecc71;
+  visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+  columns: #e74c3c;
+  visibility: visible;
+}
+
+.form-control small {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.form-control.error small {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.forms button {
+  background-color: #f7f7f7;
+  border: 2px solid #f7f7f7;
+  border-radius: 4px;
+  color: black;
+  display: block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: right;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+      opacity: .4
   }
-
-  .box {
-    width: 300px;
-    padding: 30px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background: rgba(121, 121, 121, 0.363);
-    text-align: center;
+  to {
+      opacity: 1
   }
+}
 
-  .box h1 {
-    color: white;
-    text-transform: uppercase;
-    font-weight: 700;
+@keyframes fade {
+  from {
+      opacity: .4
   }
-
-  .box input[type="text"] {
-      border: 0;
-      background: none;
-      display: block;
-      margin: 20px auto;
-      text-align: center;
-      border: 3px solid #0367fd;
-      padding: 14px 10px;
-      width: 220px;
-      outline: none;
-      color: white;
-      border-radius: 24px;
-      transition: 0.25px;
+  to {
+      opacity: 1
   }
+}
 
-  .box input[type="text"]:focus{
-    width: 270px;
-    border-color: #ffc400ec;
+ul {
+  list-style-type: none;
+}
+
+li {
+  float: left;
+}
+
+li a,
+select,
+button {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: white;
+  border: none;
+}
+
+li a:hover:not(.active) {
+  background-color: lightgrey;
+}
+
+body {
+  background-color: #fff;
+}
+
+.open-button {
+  background-color: rgb(13, 94, 170);
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 200px;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+
+/* The popup chat - hidden by default */
+
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+
+/* Add styles to the form container */
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+
+/* Full-width textarea */
+
+.form-container textarea {
+  width: 80%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+
+/* When the textarea gets focus, do something */
+
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+/* Set a style for the submit/send button */
+
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+
+/* Add a red background color to the cancel button */
+
+.form-container .cancel {
+  background-color: red;
+}
+
+
+/* Add some hover effects to buttons */
+
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
+
+
+/* 
+Tariq Ali Changes 
+*/
+
+.categories {
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.categories div {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.prodSize {
+  width: auto;
+  height: auto;
+}
+
+ul li ul li {
+  list-style-type: none;
+  display: none;
+}
+
+ul li:hover ul li {
+  list-style-type: none;
+  display: block;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 220%;
+  top: -50%;
+  left: -100%;
+  z-index: 1;
+  background-color: rgba(61, 230, 108, 0.387);
+  transform: rotate(0deg);
+  transform-origin: center top 2;
+  transition: .5s;
+}
+
+.card:hover::before {
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-text {
+  width: 100%;
+  padding: 0 20px;
+  position: absolute;
+  top: -100%;
+  background-color: rgba(255, 255, 255, 0.592);
+  color: rgb(8, 1, 1);
+  left: 0;
+  z-index: 1;
+  transition: 1.1s;
+}
+
+.card:hover .card-text {
+  top: 100px;
+}
+
+.btn-success:hover {
+  background-color: rgb(189, 90, 90);
+  color: chocolate;
+}
+
+.blink {
+  animation-name: blinker;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.blink:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+.spanBlink {
+  font-size: 20px;
+  background-color: rgba(61, 230, 108, 0.387);
+}
+
+@keyframes blinker {
+  0% {
+      opacity: 1.0;
   }
-
-  .box input [type="password"]{
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 3px solid #0367fd;
-    padding: 14px 10px;
-    width: 220px;
-    outline:  none;
-    color: white;
-    border-radius: 24px;
-    transition: 0.25px;
+  50% {
+      opacity: 0.0;
   }
-  
-  .box input [type="password"]:focus {
-    width: 270px;
-    border-color: #ffc400ec;
+  100% {
+      opacity: 1.0;
   }
-
-  .box input[type="submit"] {
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 3px solid #ffc400ec;
-    padding: 14px 10px;
-    outline: none;
-    color: white;
-    border-radius: 24px;
-    transition: 0.25px;
-    cursor: pointer;
-    }
-
-    .box input[type="submit"]:hover {
-      border-color: #0367fd;
-
-    }
+}

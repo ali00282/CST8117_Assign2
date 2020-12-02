@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes</title>
+    <link rel="stylesheet" href="index1.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="banner" id="changeBanner">
+            Free shipping for orders over 100$
+        </div>
+
+        <div class="myheader">
+            <div class="logo">
+                <a href="index1.html"><img src="images/logo1.png" alt="our Logo" id="logo"></a>
+            </div>
+            <div class="header">
+                <ul>
+                    <li>Categories
+                        <ul>
+                            <li>
+                                <a href="Shoes.html">Shoes</a>
+                            </li>
+                            <li>
+                                <a href="clothes.html">Clothes</a>
+                            </li>
+                            <li>
+                                <a href="accessories.html">Accessories</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <li class=" sales "><a href="sales.html">Sales</a></li>
+                <li class=" cart "><a href=" cart ">Cart</a></li>
+                <li class=" searchArea "><a href=" search ">Search</a></li>
+                </ul>
+            </div>
+            <div class=" subheader " id=" subheader ">
+                <ul>
+
+                    <li class=" registration "><a href=" register ">Register</a></li>
+                    <li class=" logIn "><a href=" log ">Log In</a></li>
+                    <li>
+                        <select name=" languages " id=" languages ">
+                            <option value=" languageFr ">Fr</option>
+                            <option value=" languageEn ">En</option>
+                        </select>
+                    </li>
+                    <li> <button id=" light " type=" light " onclick=" changemode(light) ">Light</button> </li>
+                    <li> <button id=" dark " type=" dark " onclick=" changemode(dark) ">Dark</button> </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <main>
+        <div class=" categories ">
+
+            <div class="card ">
+                <img class=" prodSize " src=" images/femalePic3.jpg " alt=" Perfume Pic1 ">
+                <div class=" card-text ">
+                    <p><b>Product Name:</b> Wow Perfume</p>
+                    <p><b>Price:</b> $14.99USD</p>
+                    <p><b>Product#</b> 001122</p>
+                    <a class="btn btn-success" href="#" role="button">Add to cart</a>
+                </div>
+
+            </div>
+            <div class=" card ">
+                <img class=" prodSize " src=" images/femalePic3.jpg " alt=" Male Perfume Pic2 ">
+
+                <div class=" card-text ">
+                    <p><b>Product Name:</b> Amazing Perfume</p>
+                    <p><b>Price:</b> <strike>$20.99USD</strike> $14.99USD</p>
+                    <p><b>Product#</b> 001133</p>
+                    <a class="btn btn-success" href="#" role="button">Add to cart</a>
+                </div>
+            </div>
+
+            <div class="card ">
+                <img class=" prodSize " src=" images/femalePic3.jpg " alt=" Male Perfume Pic3 ">
+                <div class=" card-text ">
+                    <p><b>Product Name:</b> Sweet Perfume</p>
+                    <p><b>Price:</b> $19.99USD</p>
+                    <p><b>Product#</b> 001144</p>
+                    <a class="btn btn-success" href="#" role="button">Add to cart</a>
+                </div>
+            </div>
+
+            <div class="card ">
+                <img class=" prodSize " src=" images/femalePic3.jpg " alt=" Male Perfume Pic4 ">
+                <div class=" card-text ">
+                    <p><b>Product Name:</b> Crazy Smell</p>
+                    <p><b>Price:</b> $9.99USD</p>
+                    <p><b>Product#</b> 001155</p>
+                    <a class="btn btn-success" href="#" role="button">Add to cart</a>
+                </div>
+            </div>
+
+            <div class="card ">
+                <img class=" prodSize " src=" images/femalePic3.jpg " alt=" Male Perfume Pic5 ">
+                <div class=" card-text ">
+                    <p><b>Product Name:</b> Nice Perfume</p>
+                    <p><b>Price:</b> $30.00USD</p>
+                    <p><b>Product#</b> 001166</p>
+                    <a class="btn btn-success" href="#" role="button">Add to cart</a>
+                </div>
+            </div>
+
+            <div class="card ">
+                <img class=" prodSize " src=" images/femalePic3.jpg " alt=" Male Perfume Pic6 ">
+                <div class=" card-text ">
+                    <p><b>Product Name:</b> Boss of Perfumes</p>
+                    <p><b>Price:</b> $99.99USD</p>
+                    <p><b>Product#</b> 001177</p>
+                    <a class="btn btn-success" href="#" role="button">Add to cart</a>
+                </div>
+            </div>
+
+            <div class="card ">
+                <img class=" prodSize " src=" images/femalePic3.jpg " alt=" Male Perfume Pic7 ">
+                <div class=" card-text ">
+                    <p><b>Product Name:</b> No Compare Perfume</p>
+                    <p><b>Price:</b> <strike>$20.49USD</strike> $14.49USD</p>
+                    <p><b>Product#</b> 001188</p>
+                    <a class="btn btn-success" href="#" role="button">Add to cart</a>
+                </div>
+            </div>
+
+            <div class="card ">
+                <img class=" prodSize " src=" images/femalePic3.jpg " alt=" Male Perfume Pic8 ">
+                <div class=" card-text ">
+                    <p><b>Product Name:</b> Perfect Show</p>
+                    <p><b>Price:</b> $25.50USD</p>
+                    <p><b>Product#</b> 001199</p>
+                    <a class="btn btn-success" href="#" role="button">Add to cart</a>
+                </div>
+
+            </div>
+
+            <div class="card ">
+                <img class=" prodSize " src=" images/femalePic3.jpg " alt=" Male Perfume Pic9 ">
+                <div class=" card-text ">
+                    <p><b>Product Name:</b> Soft But Strong</p>
+                    <p><b>Price:</b> $5.99USD</p>
+                    <p><b>Product#</b> 0011011</p>
+                    <a class="btn btn-success" href="#" role="button">Add to cart</a>
+                </div>
+
+            </div>
+
+            <div class="card ">
+                <img class=" prodSize " src=" images/femalePic3.jpg " alt=" Male Perfume Pic10 ">
+                <div class=" card-text ">
+                    <p><b>Product Name:</b> Fresh Wood</p>
+                    <p><b>Price:</b> $135.00USD</p>
+                    <p><b>Product#</b> 0011022</p>
+                    <a class="btn btn-success" href="#" role="button">Add to cart</a>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+    <button class=" open-button " id=" open-button " onclick=" openForm() ">Chat</button>
+
+    <div class=" chat-popup " id=" myForm ">
+        <form action=" /action_page.php " class=" form-container ">
+            <h1>Chat</h1>
+
+            <label for=" msg "><b></b></label>
+            <textarea placeholder=" Type message.. " name=" msg " required></textarea>
+
+            <button type=" submit " class=" btn ">Send</button>
+            <button type=" button " class=" btn cancel " onclick=" closeForm() ">Close</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class=" subfooter ">
+            <table>
+                <tr class=" title ">
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class=" story ">
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class=" footer ">
+            <div class=" contact ">Contact Us</div>
+            <div class=" FollowUs ">Follow Us</div>
+        </div>
+    </footer>
+
+
+    <script src=" code.js "></script>
+</body>
+
+
+</html>

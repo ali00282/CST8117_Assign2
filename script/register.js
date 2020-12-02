@@ -15,7 +15,9 @@ function change() {
 
 const form = document.getElementsById('form');
 const Username = document.getElementsById('username');
+const email = document.getElementsById('email');
 const Password = document.getElementsById('Password');
+const Password2 = document.getElementsById('password2');
 
 form.addEventListener('submit', (e) => {
     e.preventDeault();
@@ -26,7 +28,9 @@ form.addEventListener('submit', (e) => {
 function checkInputs() {
   // get the values from the inputs 
   const UsernameValue = username.value.trim();
+  const emailValue = email.value.trim();
   const PasswordValue = Password.value.trim();
+  const Password2Value = Password2.value.trim();
 
   if(UsernameValue === '') {
     // show error 
@@ -37,11 +41,28 @@ function checkInputs() {
     setSuccessFor(username);
   }
 
+  if(emailValue === '') {
+    setErrorFor(email, 'Email cannot be blank');
+  } else if(!isEmail(emailValue)) {
+    setErrorFor(email, "Email is not valid");
+  } else {
+    setSuccessFor(email);
+  }
+
   if(PasswordValue === '') {
     setSuccessFor(Password, 'Password cannot be blank');
   } else {
     setSuccessFor(Password)
   }
+
+  if(Password2Value === '') {
+    setSuccessFor(Password2, 'Password2 can not be blank');
+  } else if(PasswordValue !== Password2Value) {
+    setErrorFor(Password2, 'password2 does not match')
+  } else {
+    setSuccessFor(Password2);
+  }
+}
 
 function setErrorFor(input, message){
   const formControl = input.parentElement; // .form-control
@@ -62,22 +83,22 @@ function setSuccessFor(input) {
 
 function changemode(mode) {
 
-    if (mode == light) {
-        document.getElementsByTagName("body")[0].style.backgroundColor = "white";
-    } else {
-        document.getElementsByTagName("body")[0].style.backgroundColor = "black";
-    }
+  if (mode == light) {
+      document.getElementsByTagName("body")[0].style.backgroundColor = "white";
+  } else {
+      document.getElementsByTagName("body")[0].style.backgroundColor = "black";
   }
-  
-  /*chat window */
-  
-  function openForm() {
-    document.getElementById("myForm").style.display = "block";
-    document.getElementById("open-button").style.display = "none";
-  
-  }
-  
-  function closeForm() {
-    document.getElementById("open-button").style.display = "block";
-    document.getElementById("myForm").style.display = "none";
-  }
+}
+
+/*chat window */
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+  document.getElementById("open-button").style.display = "none";
+
+}
+
+function closeForm() {
+  document.getElementById("open-button").style.display = "block";
+  document.getElementById("myForm").style.display = "none";
+}
