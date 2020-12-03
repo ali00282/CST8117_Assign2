@@ -59,4 +59,34 @@ function closeForm() {
 }
 
 /*cart code */
-var cartItem = document.getElementById("cart-item");
+
+
+function calcSum() {
+    var total = 0;
+    var subTotal = 0;
+    var taxVal = 0;
+    var TAX = 0.08
+    for (i = 1; i < 3; i++) {
+        q = document.getElementById("q-" + i);
+        p = document.getElementById("p-" + i);
+        qty = q.value;
+        price = parseInt(p.innerText.replace('$', ''));
+        console.log(price);
+        subTotal += qty * price;
+    }
+    console.log(qty);
+
+    sub = document.getElementById("sub");
+    tot = document.getElementById("tot");
+    tax = document.getElementById("tx");
+    taxVal = subTotal * TAX;
+    tax.innerText = taxVal;
+    total = subTotal + taxVal;
+    sub.innerText = subTotal;
+    tot.innerText = total;
+}
+
+function inputClick(e) {
+    console.log(e.value);
+    calcSum();
+}
