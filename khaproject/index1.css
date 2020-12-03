@@ -1,70 +1,81 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: serif;
+    font-family: Helvetica,Arial,  sans-serif;
 }
-
-.container {
+.container{
     display: grid;
+    margin-bottom: 20px;
 }
-
-.myheader {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    display: block;
+.myheader{
     background-color: #fff;
     display: flex;
-    align-items: stretch;
+    align-items: center;
+    width: 100%;  
+    margin: auto;
+    justify-self: stretch;
 }
-
-.banner {
+.stickyheader{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.banner{
     background-color: black;
     text-align: center;
-    color: white;
+    color: orange;
     font-size: 15px;
-    padding: 10px;
-    font-weight: bold;
+    padding: 5px;
+    font-weight: bold;   
 }
-
-#logo {
-    width: 180px;
-    height: 180px;
+.mode{
+    display: flex;
+    background-color: white;
+    justify-content: flex-end;
+    padding: 5px;
+}
+#light{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 45px;
+    height: fit-content;
+    padding: 0;
+}
+#dark{
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 45px;
+    height: fit-content;
+    padding: 0;
+}
+#logo{
+    width: 100px;
+    height: 100px;
     float: left;
     position: relative;
 }
-
-.logo {
+.logo{
     flex-grow: 1;
 }
-
 .subheader {
     background-color: #fff;
-    float: right;
-    justify-content: space-around;
-    justify-content: center;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 15px;
-    flex-grow: 2;
-    margin: auto;
 }
-
 .header {
     background-color: #fff;
-    justify-content: space-around;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 20px;
-    justify-content: center;
-    flex-grow: 3;
-    margin: auto;
+    flex-grow: 1;
 }
-
-.bigimage,
-img {
-    width: auto;
-    height: 600px;
+.bigimage{
+    width: 1365px;
+    height: 800px;
 }
-
 .text {
     color: #f2f2f2;
     font-size: 15px;
@@ -74,19 +85,14 @@ img {
     width: 100%;
     text-align: right;
 }
-
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
 }
-
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
-
-.prev,
-.next {
+.prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -100,48 +106,34 @@ img {
     border-radius: 0 3px 3px 0;
     user-select: none;
 }
-
 .slideshow {
     position: relative;
     margin: auto;
 }
-
 .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
     animation-duration: 1.5s;
 }
-
 @-webkit-keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
+    from {opacity: .4} 
+    to {opacity: 1}
 }
-
 @keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
+    from {opacity: .4} 
+    to {opacity: 1}
 }
-
 ul {
     list-style-type: none;
 }
-
 li {
     float: left;
 }
-
-li a,
-select,
-button {
+.header li{
+    padding-right: 25px;
+}
+li a,select,button {
     display: block;
     color: black;
     text-align: center;
@@ -150,17 +142,12 @@ button {
     background-color: white;
     border: none;
 }
-
 li a:hover:not(.active) {
     background-color: lightgrey;
 }
 
-body {
-    background-color: #fff;
-}
-
 .open-button {
-    background-color: rgb(13, 94, 170);
+    background-color: rgb(243, 135, 46);
     color: white;
     padding: 16px 20px;
     border: none;
@@ -171,33 +158,27 @@ body {
     right: 28px;
     width: 200px;
     border-radius: 20px;
-    font-size: 16px;
+    font-size: 12px;
 }
-
-
 /* The popup chat - hidden by default */
-
 .chat-popup {
     display: none;
     position: fixed;
     bottom: 0;
     right: 15px;
     border: 3px solid #f1f1f1;
+    border-radius: 20px;
     z-index: 9;
 }
-
-
 /* Add styles to the form container */
-
 .form-container {
     max-width: 300px;
     padding: 10px;
     background-color: white;
+    border-radius: 20px;
+    
 }
-
-
 /* Full-width textarea */
-
 .form-container textarea {
     width: 80%;
     padding: 15px;
@@ -205,44 +186,66 @@ body {
     border: none;
     background: #f1f1f1;
     resize: none;
-    min-height: 200px;
+    min-height: 100px;
+    border-radius: 20px;
 }
-
-
 /* When the textarea gets focus, do something */
-
 .form-container textarea:focus {
-    background-color: #ddd;
+    background-color: white;
     outline: none;
 }
-
-
 /* Set a style for the submit/send button */
-
 .form-container .btn {
-    background-color: #4CAF50;
+    background-color: #63b666;
     color: white;
     padding: 16px 20px;
     border: none;
+    border-radius: 20px;
     cursor: pointer;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom:10px;
     opacity: 0.8;
 }
-
-
-/* Add a red background color to the cancel button */
-
+/* Add a background color to the cancel button */
 .form-container .cancel {
-    background-color: red;
+    background-color: black;
+    border-radius: 20px;
 }
-
-
 /* Add some hover effects to buttons */
-
-.form-container .btn:hover,
-.open-button:hover {
+.form-container .btn:hover, .open-button:hover {
     opacity: 1;
+}
+.main{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+.section1{
+    display: flex;
+}
+#sectionimg1{
+    flex-grow: 1;
+    width: 700px;
+    height: 700px;
+    float: left;
+}
+#sectiontxt1{
+    flex-grow: 1;
+    font-size: 50px;
+    text-align: center;
+    justify-content: center;
+}
+.section2{
+    display: flex;
+}
+#sectionimg2{
+    flex-grow: 1;
+    width: 700px;
+    height: 500px;
+    float: right;
+}
+#sectiontxt2{
+    flex-grow: 1;
 }
 
 
