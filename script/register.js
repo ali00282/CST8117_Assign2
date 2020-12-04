@@ -1,104 +1,82 @@
-/*function to change banner*/
-var text = ["Chrismas offers Limited time offers", "Welcome Gift ...", "Free shipping for orders over 100$"];
-var counter = 0;
-var inst = setInterval(change, 4000);
+var check = true;
 
-function change() {
-    document.getElementById("changeBanner").innerHTML = text[counter];
-    counter++;
-    if (counter >= text.length) {
-        counter = 0;
+function validate(e) {
+
+    e.preventDefault();
+
+    var valid = true;
+
+    if (loginForm.username.value === "") {
+        document.loginForm.username.style.backgroundColor = "red";
+        document.querySelector('#usernameValidation').innerHTML = "*Please enter a username*";
+        valid = false;
+        check = false;
     }
-}
 
-// function for forms 
+    if (loginForm.email.value === "") {
+        document.loginForm.email.style.backgroundColor = "red";
+        document.querySelector('#emailValidation').innerHTML = "*Please enter an email*";
+        valid = false;
+        check = false;
+    }
 
-const form = document.getElementsById('form');
-const Username = document.getElementsById('username');
-const email = document.getElementsById('email');
-const Password = document.getElementsById('Password');
-const Password2 = document.getElementsById('password2');
+    if (loginForm.password.value === "") {
+        document.loginForm.password.style.backgroundColor = "red";
+        document.querySelector('#passwordValidation').innerHTML = "*Please enter a username*";
+        valid = false;
+        check = false;
+    }
 
-form.addEventListener('submit', (e) => {
-    e.preventDeault();
-    checkInputs();
+    if (loginForm.passwordCheck.value === "") {
+        document.loginForm.passwordCheck.style.backgroundColor = "red";
+        document.querySelector('#passCheckValidation').innerHTML = "*Password check must be same as password*";
+        valid = false;
+        check = false;
+    }
+    if (loginForm.passwordCheck.value != loginForm.password.value) {
+        document.loginForm.passwordCheck.style.backgroundColor = "red";
+        document.querySelector('#passCheckValidation').innerHTML = "*Password does not match*";
+        valid = false;
+        check = false;
+    }
+
+    if (valid) {
+        alert("You have successfully registered with us!!!");
+        window.location = "index1.html";
+    }
+
+    check = true;
+    return valid;
+
+};
+
+document.querySelector('#username').addEventListener("blur", function() {
+    if (this.value !== "") {
+        document.loginForm.username.style.backgroundColor = " rgba(61, 230, 108, 0.387)";
+        usernameValidation.innerHTML = "";
+    }
+});
+
+document.querySelector('#email').addEventListener("blur", function() {
+    if (this.value !== "") {
+        document.loginForm.email.style.backgroundColor = " rgba(61, 230, 108, 0.387)";
+        emailValidation.innerHTML = "";
+    }
+});
+
+document.querySelector('#password').addEventListener("blur", function() {
+    if (this.value !== "") {
+        document.loginForm.password.style.backgroundColor = " rgba(61, 230, 108, 0.387)";
+        passwordValidation.innerHTML = "";
+    }
+});
+
+document.querySelector('#passwordCheck').addEventListener("blur", function() {
+    if (this.value !== "") {
+        document.loginForm.passwordCheck.style.backgroundColor = " rgba(61, 230, 108, 0.387)";
+        passCheckValidation.innerHTML = "";
+    }
 
 });
 
-function checkInputs() {
-  // get the values from the inputs 
-  const UsernameValue = username.value.trim();
-  const emailValue = email.value.trim();
-  const PasswordValue = Password.value.trim();
-  const Password2Value = Password2.value.trim();
-
-  if(UsernameValue === '') {
-    // show error 
-    // add error class
-    setErrorFor(username, 'Username cannot be blank');
-  } else {
-    // add success class 
-    setSuccessFor(username);
-  }
-
-  if(emailValue === '') {
-    setErrorFor(email, 'Email cannot be blank');
-  } else if(!isEmail(emailValue)) {
-    setErrorFor(email, "Email is not valid");
-  } else {
-    setSuccessFor(email);
-  }
-
-  if(PasswordValue === '') {
-    setSuccessFor(Password, 'Password cannot be blank');
-  } else {
-    setSuccessFor(Password)
-  }
-
-  if(Password2Value === '') {
-    setSuccessFor(Password2, 'Password2 can not be blank');
-  } else if(PasswordValue !== Password2Value) {
-    setErrorFor(Password2, 'password2 does not match')
-  } else {
-    setSuccessFor(Password2);
-  }
-}
-
-function setErrorFor(input, message){
-  const formControl = input.parentElement; // .form-control
-  const small = formControl.querySelector('small');
-  //  add error massage inside small 
-  small.innerText = message;
-
-  // add error class 
-  formControl.className = 'form-control error';
-}
- 
-function setSuccessFor(input) {
-  const formControl = input.parentElement; // .form-control
-  formControl.className = 'form-control success';
-}
-
-/* change mode light/dark */
-
-function changemode(mode) {
-
-  if (mode == light) {
-      document.getElementsByTagName("body")[0].style.backgroundColor = "white";
-  } else {
-      document.getElementsByTagName("body")[0].style.backgroundColor = "black";
-  }
-}
-
-/*chat window */
-
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-  document.getElementById("open-button").style.display = "none";
-
-}
-
-function closeForm() {
-  document.getElementById("open-button").style.display = "block";
-  document.getElementById("myForm").style.display = "none";
-}
+document.loginForm.addEventListener("submit", validate);

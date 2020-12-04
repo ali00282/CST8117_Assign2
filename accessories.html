@@ -5,67 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accessories</title>
-    <link rel="stylesheet" href="index1.css">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style/index1.css">
 </head>
 
 <body>
     <div class="container">
-
-        <div class="banner" id="changeBanner">
-            Free shipping for orders over 100$
-        </div>
-
-        <div class="myheader">
-            <div class="logo">
-                <a href="index1.html"><img src="images/logo1.png" alt="our Logo" id="logo"></a>
+        <div class="stickyheader">
+            <div class="banner" id="changeBanner">
+                Free shipping for orders over 100$
             </div>
-            <div class="header">
-                <ul>
-                    <li>Categories
-                        <ul>
-                            <li>
-                                <a href="Shoes.html">Shoes</a>
-                            </li>
-                            <li>
-                                <a href="clothes.html">Clothes</a>
-                            </li>
-                            <li>
-                                <a href="accessories.html">Accessories</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <li class=" sales "><a href="sales.html">Sales</a></li>
-                <li class=" searchArea "><a href=" search ">Search</a></li>
-                <li class="cart"><a href="cart.html">Cart</a></li>
-                <li class="cart-item"><a href="cart">0</a>
+
+            <div class="mode">
+                <button id="light" type="light" onclick="changemode(light)">Light</button>
+                <button id="dark" type="dark" onclick="changemode(dark)">Dark</button>
+            </div>
+
+            <div class="myheader">
+
+                <div class="logo">
+                    <a href="index1.html"><img src="images/logo1 - Copy.png" alt="our Logo" id="logo"></a>
+                </div>
+                <div class="header">
+                    <ul>
+                        <li class=""><a href="clothes.html">CLOTHES</a></li>
+                        <li class=""><a href="Shoes.html">SHOES</a></li>
+                        <li class=""><a href="accessories.html">ACCESSORIES</a></li>
                     </ul>
+                </div>
+                <div class="subheader" id="subheader">
+                    <ul>
+                        <li class="searchArea1">
+                            <form action="" id="searchForm1">
+                                <input type="search" class="searchInput">
+                                <i class="fa fa-search"></i>
+                            </form>
+                        </li>
+                        <li class="registration"><a href="register.html">Register</a></li>
+                        <li class="logIn"><a href="logIn.html">Log In</a></li>
+                        <li class="cart"><a href="cart.html">Cart</a></li>
+                    </ul>
+
+                </div>
+
             </div>
-            <div class=" subheader " id=" subheader ">
-                <ul>
-
-                    <li class=" registration "><a href=" register ">Register</a></li>
-                    <li class=" logIn "><a href=" log ">Log In</a></li>
-                    <li>
-                        <select name=" languages " id=" languages ">
-                            <option value=" languageFr ">Fr</option>
-                            <option value=" languageEn ">En</option>
-                        </select>
-                    </li>
-                    <li> <button id=" light " type=" light " onclick=" changemode(light) ">Light</button> </li>
-                    <li> <button id=" dark " type=" dark " onclick=" changemode(dark) ">Dark</button> </li>
-                </ul>
-
-            </div>
-
         </div>
     </div>
 
@@ -79,8 +61,6 @@
                     <p><b>Product Name:</b> Wow Perfume</p>
                     <p><b>Price:</b> <strike>$14.99USD</strike> <span class="spanBlink blink"><b>$7.49USD</b></span></p>
                     <p><b>Product#</b> 001122</p>
-                    <!-- <h3>Clearance Sale: 50% Off</h3> -->
-                    <a class="btn btn-success" href="#" role="button">Add to cart</a>
                 </div>
                 <h3 class="blink">Clearance Sale: 50% Off</h3>
             </div>
@@ -91,7 +71,6 @@
                     <p><b>Product Name:</b> Amazing Perfume</p>
                     <p><b>Price:</b> <strike>$20.99USD</strike> <span class="spanBlink blink"><b>$10.45USD</b></span></p>
                     <p><b>Product#</b> 001133</p>
-                    <a class="btn btn-success" href="#" role="button">Add to cart</a>
                 </div>
                 <h3 class="blink">Clearance Sale: 50% Off</h3>
             </div>
@@ -102,7 +81,6 @@
                     <p><b>Product Name:</b> Sweet Perfume</p>
                     <p><b>Price:</b> <strike>$19.99USD</strike> <span class="spanBlink blink"><b>$9.99USD</b></span></p>
                     <p><b>Product#</b> 001144</p>
-                    <a class="btn btn-success" href="#" role="button">Add to cart</a>
                 </div>
                 <h3 class="blink">Clearance Sale: 50% Off</h3>
             </div>
@@ -113,7 +91,6 @@
                     <p><b>Product Name:</b> Crazy Smell</p>
                     <p><b>Price:</b> <strike>$9.99USD</strike> <span class="spanBlink blink"><b>$4.99USD</b></span></p>
                     <p><b>Product#</b> 001155</p>
-                    <a class="btn btn-success" href="#" role="button">Add to cart</a>
                 </div>
                 <h3 class="blink">Clearance Sale: 50% Off</h3>
             </div>
@@ -124,7 +101,6 @@
                     <p><b>Product Name:</b> Nice Perfume</p>
                     <p><b>Price:</b> $30.00USD</p>
                     <p><b>Product#</b> 001166</p>
-                    <a class="btn btn-success" href="#" role="button">Add to cart</a>
                 </div>
             </div>
 
@@ -134,7 +110,6 @@
                     <p><b>Product Name:</b> Boss of Perfumes</p>
                     <p><b>Price:</b> $99.99USD</p>
                     <p><b>Product#</b> 001177</p>
-                    <a class="btn btn-success" href="#" role="button">Add to cart</a>
                 </div>
             </div>
 
@@ -142,29 +117,28 @@
                 <img class=" prodSize " src="images/Accessories/pexels-photo-1103829.jpeg" alt=" Male Perfume Pic7 ">
                 <div class=" card-text ">
                     <p><b>Product Name:</b> No Compare Perfume</p>
-                    <p><b>Price:</b> <strike>$20.49USD</strike> $14.49USD</p>
+                    <p><b>Price:</b> $14.49USD</p>
                     <p><b>Product#</b> 001188</p>
-                    <a class="btn btn-success" href="#" role="button">Add to cart</a>
                 </div>
             </div>
 
 
         </div>
+        <button class="open-button" id="open-button" onclick="openForm()">CHAT TO AN EXPERT <br> let us know how we can
+            help!</button>
 
+        <div class="chat-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1>Chat</h1>
+
+                <label for="msg"><b></b></label>
+                <textarea placeholder="Type message.." name="msg" required></textarea>
+
+                <button type="submit" class="btn">Send</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
     </main>
-    <button class=" open-button " id=" open-button " onclick=" openForm() ">Chat</button>
-
-    <div class=" chat-popup " id=" myForm ">
-        <form action=" /action_page.php " class=" form-container ">
-            <h1>Chat</h1>
-
-            <label for=" msg "><b></b></label>
-            <textarea placeholder=" Type message.. " name=" msg " required></textarea>
-
-            <button type=" submit " class=" btn ">Send</button>
-            <button type=" button " class=" btn cancel " onclick=" closeForm() ">Close</button>
-        </form>
-    </div>
 
     <footer>
         <div class=" subfooter ">
@@ -186,7 +160,7 @@
     </footer>
 
 
-    <script src=" code.js "></script>
+    <script src="script/code.js "></script>
 </body>
 
 

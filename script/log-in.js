@@ -1,83 +1,45 @@
-/*function to change banner*/
-var text = ["Chrismas offers Limited time offers", "Welcome Gift ...", "Free shipping for orders over 100$"];
-var counter = 0;
-var inst = setInterval(change, 4000);
+function validate(e) {
 
-function change() {
-    document.getElementById("changeBanner").innerHTML = text[counter];
-    counter++;
-    if (counter >= text.length) {
-        counter = 0;
+    e.preventDefault();
+
+    var valid = true;
+
+    var email = "cst8117@project.ca";
+    var pass = "8117"
+
+    if (loginForm.username.value != email) {
+        document.loginForm.username.style.backgroundColor = "red";
+        document.querySelector('#usernameValidation').innerHTML = "*Please enter a correct username*";
+        valid = false;
     }
-}
 
-// function for forms 
+    if (loginForm.password.value != pass) {
+        document.loginForm.password.style.backgroundColor = "red";
+        document.querySelector('#passwordValidation').innerHTML = "*Please enter a password*";
+        valid = false;
+    }
 
-const form = document.getElementsById('form');
-const Username = document.getElementsById('username');
-const Password = document.getElementsById('Password');
+    if (valid) {
+        window.location = "index1.html";
+    }
 
-form.addEventListener('submit', (e) => {
-    e.preventDeault();
-    checkInputs();
+    return valid;
 
+};
+
+
+document.querySelector('#username').addEventListener("blur", function() {
+    if (this.value !== "" && this.value === "cst8117@project.ca") {
+        document.loginForm.username.style.backgroundColor = " rgba(61, 230, 108, 0.387)";
+        usernameValidation.innerHTML = "";
+    }
 });
 
-function checkInputs() {
-  // get the values from the inputs 
-  const UsernameValue = username.value.trim();
-  const PasswordValue = Password.value.trim();
-
-  if(UsernameValue === '') {
-    // show error 
-    // add error class
-    setErrorFor(username, 'Username cannot be blank');
-  } else {
-    // add success class 
-    setSuccessFor(username);
-  }
-
-  if(PasswordValue === '') {
-    setSuccessFor(Password, 'Password cannot be blank');
-  } else {
-    setSuccessFor(Password)
-  }
-
-function setErrorFor(input, message){
-  const formControl = input.parentElement; // .form-control
-  const small = formControl.querySelector('small');
-  //  add error massage inside small 
-  small.innerText = message;
-
-  // add error class 
-  formControl.className = 'form-control error';
-}
- 
-function setSuccessFor(input) {
-  const formControl = input.parentElement; // .form-control
-  formControl.className = 'form-control success';
-}
-
-/* change mode light/dark */
-
-function changemode(mode) {
-
-    if (mode == light) {
-        document.getElementsByTagName("body")[0].style.backgroundColor = "white";
-    } else {
-        document.getElementsByTagName("body")[0].style.backgroundColor = "black";
+document.querySelector('#password').addEventListener("blur", function() {
+    if (this.value !== "" && this.value === "8117") {
+        document.loginForm.password.style.backgroundColor = " rgba(61, 230, 108, 0.387)";
+        passwordValidation.innerHTML = "";
     }
-  }
-  
-  /*chat window */
-  
-  function openForm() {
-    document.getElementById("myForm").style.display = "block";
-    document.getElementById("open-button").style.display = "none";
-  
-  }
-  
-  function closeForm() {
-    document.getElementById("open-button").style.display = "block";
-    document.getElementById("myForm").style.display = "none";
-  }
+});
+
+document.loginForm.addEventListener("submit", validate);

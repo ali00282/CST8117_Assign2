@@ -1,91 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style/register.css">
-    <link rel="JavaScript" type="text/JS" href="script/register.js">
+    <link rel="stylesheet" href="style/index1.css">
+    <link rel="stylesheet" type="text/css" href="style/reg-login.css">
+
     <title>log in form</title>
-        </head>
-        <body>   
-            <body>
-                <div class="container">
-                    <div class="banner" id="changeBanner">
-                        Free shipping for orders over 100$
-                    </div>
-                    <div class="myheader">
-                        <div class="logo">
-                            <img src="khaproject/images/logo1.png" alt="our Logo" id="logo">
-                        </div>
-                        <div class="header">
-                            <ul>
-                                <li class="categories"><a href="categories"> Categories</a></li>
-                                <li class="sales"><a href="sales">Sales</a></li>
-                                <li class="cart"><a href="cart">Cart</a></li>
-                                <li class="searchArea"><a href="search">Search</a></li>
-                            </ul>
-                        </div>
-                        <div class="subheader" id="subheader">
-                            <ul>
-                                <li class="registration"><a href="register.html">Register</a></li>
-                                <li class="logIn"><a href="logIn.html">Log In</a></li>
-                                <li>
-                                    <select name="languages" id="languages">
-                                        <option value="languageFr">Fr</option>
-                                        <option value="languageEn">En</option>
-                                    </select>
-                                </li>
-                                <li> <button id="light" type="light" onclick="changemode(light)">Light</button> </li>
-                                <li> <button id="dark" type="dark" onclick="changemode(dark)">Dark</button> </li>
-                            </ul>
-                        </div>
-            
-                    </div>        
-                <main>
-                    <div class="forms">
-                        <div class="form-header">
-                            <h1>Log In</h1>
-                        </div>
-                        <form class="form" id="form">
-                            <div class="form-control">
-                                <label>Username</label>
-                                <input type="text" placeholder="Florinpop17" id="username">
-                                <i class="fas fa-check-circle"></i>
-                                <i class="fas fa-exclamation-circle"></i>
-                                <small>Error massage</small>
-                            </div>
-    
-                            <div class="form-control">
-                                <label>Password</label>
-                                <input type="password" placeholder="password" id="password">
-                                <i class="fas fa-check-circle"></i>
-                                <i class="fas fa-exclamation-circle"></i>
-                                <small>Error massage</small>                       
-                            </div>
-    
-                            <button id="submit" value="submit">submit</button>
-                        </form>
-                    </div>
-            
-                </main>
-                <button class="open-button" id="open-button" onclick="openForm()">Chat</button>
-            
-                <div class="chat-popup" id="myForm">
-                    <form action="/action_page.php" class="form-container">
-                        <h1>Chat</h1>
-            
-                        <label for="msg"><b></b></label>
-                        <textarea placeholder="Type message.." name="msg" required></textarea>
-            
-                        <button type="submit" class="btn">Send</button>
-                        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-                    </form>
+</head>
+
+<body>
+    <div class="container">
+        <div class="stickyheader">
+            <div class="banner" id="changeBanner">
+                Free shipping for orders over 100$
+            </div>
+
+            <div class="mode">
+                <button id="light" type="light" onclick="changemode(light)">Light</button>
+                <button id="dark" type="dark" onclick="changemode(dark)">Dark</button>
+            </div>
+
+            <div class="myheader">
+
+                <div class="logo">
+                    <a href="index1.html"><img src="images/logo1 - Copy.png" alt="our Logo" id="logo"></a>
                 </div>
-                <footer>
-                    <!-- <div class="footer">
-                        <div class="contact">Contact Us</div>
-                        <div class="FollowUs">Follow Us</div>
-                    </div> -->
-                </footer>
-            </body>
-            </html>
+                <div class="header">
+                    <ul>
+                        <li class=""><a href="clothes.html">CLOTHES</a></li>
+                        <li class=""><a href="Shoes.html">SHOES</a></li>
+                        <li class=""><a href="accessories.html">ACCESSORIES</a></li>
+                    </ul>
+                </div>
+                <div class="subheader" id="subheader">
+                    <ul>
+                        <li class="searchArea1">
+                            <form action="" id="searchForm1">
+                                <input type="search" class="searchInput">
+                                <i class="fa fa-search"></i>
+                            </form>
+                        </li>
+                        <li class="registration"><a href="register.html">Register</a></li>
+                        <li class="logIn"><a href="logIn.html">Log In</a></li>
+                        <li class="cart"><a href="cart.html">Cart</a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <main>
+        <div class="container1">
+            <form id="loginForm" name="loginForm" action="index1.html">
+                <div>
+                    <h1>Login Form</h1>
+                </div>
+                <div class="form-group1">
+                    <label>Username</label>
+                    <input type="text" placeholder="8117-Team" id="username" name="username" class="form-control1">
+                    <span id="usernameValidation" class="errorText"></span>
+                </div>
+                <br>
+                <div class="form-group1">
+                    <label>Password</label>
+                    <input type="password" placeholder="********" id="password" name="password" class="form-control1">
+                    <span id="passwordValidation" class="errorText"></span>
+                </div>
+                <br>
+                <br><br>
+                <!-- <button type="submit" onclick="index1.html" value="Log In">Log In</button> -->
+                <input type="submit" value="Log In" name="btnSubmit" class="btn1">
+            </form>
+        </div>
+
+        <button class="open-button" id="open-button" onclick="openForm()">CHAT TO AN EXPERT <br> let us know how we can
+            help!</button>
+
+        <div class="chat-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1>Chat</h1>
+
+                <label for="msg"><b></b></label>
+                <textarea placeholder="Type message.." name="msg" required></textarea>
+
+                <button type="submit" class="btn">Send</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+    </footer>
+</body>
+<script src="script/log-in.js"></script>
+<!-- <script src="script/code.js "></script> -->
+
+</html>
