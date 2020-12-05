@@ -9,7 +9,7 @@ function change() {
   if (counter >= text.length) {
     counter = 0;
   }
-}
+};
 
 /* function for header slideshow */
 var slideIndex = 1;
@@ -17,11 +17,11 @@ showSlides(slideIndex);
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
-}
+};
 
 function currentSlide(n) {
   showSlides(slideIndex = n);
-}
+};
 
 function showSlides(n) {
   var i;
@@ -32,7 +32,7 @@ function showSlides(n) {
       slides[i].style.display = "none";  
   }
   slides[slideIndex-1].style.display = "block";  
-}
+};
 
 /* change mode light/dark */
 
@@ -40,13 +40,13 @@ function changemode(mode) {
 
     if (mode == light) {
         document.getElementsByTagName("body")[0].style.backgroundColor = "white";
-        document.getElementsByTagName("body")[0].style.Color = "black";
+        document.getElementsByTagName("body")[0].style.color ="black";
     }
     else{
         document.getElementsByTagName("body")[0].style.backgroundColor = "black";
         document.getElementsByTagName("body")[0].style.color = "white";
     }
-  }
+  };
 
   /*chat window */
 
@@ -54,9 +54,18 @@ function changemode(mode) {
     document.getElementById("myForm").style.display = "block";
     document.getElementById("open-button").style.display = "none";
 
-  }
+  };
 
   function closeForm() {
     document.getElementById("open-button").style.display = "block";
     document.getElementById("myForm").style.display = "none";
+  };
+
+  /* form index page*/
+  function checkin(){
+    if (document.getElementById("email").value != ""){
+     var youremail = document.getElementById("email").value;
+     alert("Thank You for signing up. \n We sent the Promocode to " + youremail + " \n enjoy your christmas shopping with 8117-TEAM" );
+     document.getElementById("email").innerHTML = "";
   }
+};
