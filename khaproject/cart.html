@@ -11,10 +11,12 @@
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <!-- our code for the cart -->
+    <script src="code.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
+<div id="header"></div>
 
 <body>
     <div class="container">
@@ -78,19 +80,18 @@
                     <th>Quantity</th>
                     <th>Subtotal</th>
                 </tr>
-                <tr>
+                <tr class="cart-line">
                     <td>
                         <div class="cart-info">
                             <img src="images/shoes/pexels-photo.jpg" alt="accessories1">
                             <div>
                                 <p>Red Shoes</p>
                                 <small>Price : 50.00$</small></br>
-                                <a href="">Remove</a>
+                                <button id="remove" onclick="myRemove()">Remove</button>
                             </div>
                         </div>
                     </td>
-
-                    <td><input id="q-1" type="number" onclick="inputClick(this)" value="1"></td>
+                    <td><input id="q-1" type="number" onclick="inputClick(this)" value="1" min="1"></td>
                     <td id="p-1">$50.00</td>
                 </tr>
                 <tr>
@@ -105,7 +106,7 @@
                         </div>
                     </td>
 
-                    <td><input id="q-2" type="number" onclick="inputClick(this)" value="1"></td>
+                    <td><input id="q-2" type="number" onclick="inputClick(this)" value="1" min="1"></td>
                     <td id="p-2">$50.00</td>
                 </tr>
                 <tr>
@@ -120,7 +121,7 @@
                         </div>
                     </td>
 
-                    <td><input id="q-3" type="number" onclick="inputClick(this)" value="1"></td>
+                    <td><input id="q-3" type="number" onclick="inputClick(this)" value="1" min="1"></td>
                     <td id="p-3">$50.00</td>
                 </tr>
 
@@ -145,19 +146,7 @@
 
 
     </main>
-    <button class=" open-button " id=" open-button " onclick=" openForm() ">Chat</button>
 
-    <div class=" chat-popup " id=" myForm ">
-        <form action=" /action_page.php " class=" form-container ">
-            <h1>Chat</h1>
-
-            <label for=" msg "><b></b></label>
-            <textarea placeholder=" Type message.. " name=" msg " required></textarea>
-
-            <button type=" submit " class=" btn ">Send</button>
-            <button type=" button " class=" btn cancel " onclick=" closeForm() ">Close</button>
-        </form>
-    </div>
 
     <footer>
         <div class=" subfooter ">
@@ -179,7 +168,7 @@
     </footer>
 
 
-    <script src=" code.js "></script>
+
 </body>
 
 
