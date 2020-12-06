@@ -1,46 +1,93 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Helvetica,Arial,  sans-serif;
+    width: 100%;
 }
-
-.container {
+.container{
     display: grid;
     margin-bottom: 20px;
 }
-
-.myheader {
+.myheader{
     background-color: #fff;
-    display: flex;
+    width: 100%;  
     align-items: center;
-    width: 100%;
-    margin: auto;
+    display: flex;
     justify-content: space-between;
 }
-
-.stickyheader {
+@media screen and (max-width: 600px) {
+    .banner{
+        font-size: 9px;
+        font-weight: normal;
+    }
+    .myheader{
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header{
+        flex-direction: column;
+        padding-right: 0px;
+        width: 50%;
+        text-align: center;
+    }
+    .smode{
+        width: 30%;
+    }
+    .smenu{
+        width: 70%;
+        justify-content: space-between;
+        text-align: right;
+    }
+    #logo{
+        display: none;
+    }
+    .story p{
+        text-align: left;
+    }
+    .codepromo{
+        font-size: 14px;
+        flex-direction: column;
+    }
+    .foo{
+        font-size: 12px;
+    }
+    .thankyou{
+        font-size: 11px;
+    }
+}
+.stickyheader{
     position: sticky;
     top: 0;
     z-index: 1;
 }
-
-.banner {
+.banner{
     background-color: black;
     text-align: center;
     color: orange;
     font-size: 15px;
     padding: 5px;
-    font-weight: bold;
+    font-weight: bold;   
 }
-
-.mode {
+.mode{
     display: flex;
     background-color: white;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 5px;
 }
+.smode{
+    display: flex;
+}
+.smenu{
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    text-decoration: none;
+    padding-left: 10px;
+}
 
-#light {
+#light{
     background-color: white;
     color: black;
     border: 1px solid black;
@@ -49,8 +96,7 @@
     height: fit-content;
     padding: 0;
 }
-
-#dark {
+#dark{
     background-color: black;
     color: white;
     border: 1px solid black;
@@ -59,56 +105,47 @@
     height: fit-content;
     padding: 0;
 }
-
-#logo {
+#logo{
     width: 140px;
     height: 120px;
-    float: left;
-    position: relative;
 }
-
-.logo {
-    flex-grow: 1;
+.logo{
+    width: 25%;
 }
-
 .header {
     background-color: #fff;
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 20px;
-    flex-grow: 1;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 20px;
+    width: 55%;
+}
+.searchArea{
+    padding-top: 50px;
+    width: 20%;
 }
 
-.subheader {
-    background-color: #fff;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 15px;
-}
-
-.searchArea1 {
-    padding-top: 30px;
-}
-
-#searchForm1 {
+#searchForm{
     position: relative;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
     transition: all 1s;
     width: 50px;
     height: 50px;
-    background: white;
+    background-color: white;
     box-sizing: border-box;
     border-radius: 25px;
     border: 4px solid white;
     padding: 5px;
 }
-
-.searchInput {
+#searchinput{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    ;
+    width: 100%;;
     height: 42.5px;
     line-height: 30px;
     outline: 0;
@@ -118,8 +155,7 @@
     border-radius: 20px;
     padding: 0 20px;
 }
-
-.fa {
+.fa{
     box-sizing: border-box;
     padding: 10px;
     width: 42.5px;
@@ -133,48 +169,41 @@
     font-size: 1.2em;
     transition: all 1s;
 }
-
-#searchForm:hover {
+#searchForm:hover{
     width: 200px;
     cursor: pointer;
 }
-
-#searchForm:hover input {
+#searchForm:hover input{
     display: block;
 }
-
-#searchForm:hover .fa {
+#searchForm:hover .fa{
     background: #07051a;
     color: white;
 }
-
-.bigimage {
-    width: 1365px;
-    height: 800px;
+.bigimage{
+    width: 100%;
+    height: auto;
 }
-
 .text {
     color: #f2f2f2;
-    font-size: 15px;
+    font-size:16px;
     padding: 8px 12px;
     position: absolute;
     bottom: 8px;
-    width: 100%;
+    width: 96%;
     text-align: right;
 }
-
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+.text a{
+    color: white
 }
-
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
-
-.prev,
-.next {
+.prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -188,52 +217,35 @@
     border-radius: 0 3px 3px 0;
     user-select: none;
 }
-
 .slideshow {
     position: relative;
     margin: auto;
+    width: 90%;
 }
-
 .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
     animation-duration: 1.5s;
 }
-
 @-webkit-keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
+    from {opacity: .4} 
+    to {opacity: 1}
 }
-
 @keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
+    from {opacity: .4} 
+    to {opacity: 1}
 }
-
 ul {
     list-style-type: none;
 }
-
 li {
     float: left;
 }
-
-.header li {
+.header li{
     padding-right: 25px;
 }
-
-li a,
-select,
-button {
+li a,select,button {
     display: block;
     color: black;
     text-align: center;
@@ -242,14 +254,12 @@ button {
     background-color: white;
     border: none;
 }
-
 li a:hover:not(.active) {
     background-color: lightgrey;
 }
-
 .open-button {
-    background-color: rgb(243, 135, 46);
-    color: white;
+    background-color:  black;
+    color: rgb(253, 184, 56);
     padding: 16px 20px;
     border: none;
     cursor: pointer;
@@ -260,11 +270,9 @@ li a:hover:not(.active) {
     width: 200px;
     border-radius: 20px;
     font-size: 12px;
+    font-weight: bold;
 }
-
-
 /* The popup chat - hidden by default */
-
 .chat-popup {
     display: none;
     position: fixed;
@@ -273,21 +281,15 @@ li a:hover:not(.active) {
     border: 3px solid #f1f1f1;
     border-radius: 20px;
     z-index: 9;
+    width: 20%;
 }
-
-
 /* Add styles to the form container */
-
 .form-container {
-    max-width: 300px;
     padding: 10px;
     background-color: white;
     border-radius: 20px;
 }
-
-
 /* Full-width textarea */
-
 .form-container textarea {
     width: 80%;
     padding: 15px;
@@ -298,18 +300,12 @@ li a:hover:not(.active) {
     min-height: 100px;
     border-radius: 20px;
 }
-
-
 /* When the textarea gets focus, do something */
-
 .form-container textarea:focus {
     background-color: white;
     outline: none;
 }
-
-
 /* Set a style for the submit/send button */
-
 .form-container .btn {
     background-color: #63b666;
     color: white;
@@ -318,65 +314,118 @@ li a:hover:not(.active) {
     border-radius: 20px;
     cursor: pointer;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom:10px;
     opacity: 0.8;
 }
-
-
 /* Add a background color to the cancel button */
-
 .form-container .cancel {
     background-color: black;
     border-radius: 20px;
 }
-
-
 /* Add some hover effects to buttons */
-
-.form-container .btn:hover,
-.open-button:hover {
+.form-container .btn:hover, .open-button:hover {
     opacity: 1;
 }
-
-.main {
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-}
-
-.section1 {
+.main{
     display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
-
-#sectionimg1 {
-    flex-grow: 1;
-    width: 700px;
-    height: 700px;
-    float: left;
+/* section : image area*/
+#sectionimg1{
+    width: 100%;
+    height: auto;
 }
-
-#sectiontxt1 {
-    flex-grow: 1;
-    font-size: 50px;
+/* section : text area*/
+#sectiontxt1{
+    font-size: 5vw;
     text-align: center;
     justify-content: center;
+    font-weight: bold;
+    width: 100%;
+    height: auto;
 }
-
-.section2 {
+.subfooter{
+    background-color: #ebedee;
+    width: 100%;
+    margin-top: 25px;  
+    font-weight: lighter;
+    margin: auto;
+}
+.subfoo{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.story{
     display: flex;
 }
-
-#sectionimg2 {
-    flex-grow: 1;
-    width: 700px;
-    height: 500px;
-    float: right;
+.story p{
+    padding: 10px;
+    text-align: justify;
+    width: 50%;
 }
-
-#sectiontxt2 {
-    flex-grow: 1;
+.title{
+    display: flex;
 }
-
+.title p{
+    padding: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    width: 50%;
+}
+.bottom{
+    background-color: rgb(253, 184, 56);
+    width: 100%;
+    height: auto;
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+    margin: auto;
+}
+.codepromo{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding : 30px 0px 30px 0px;
+    align-items: center;
+    justify-content: space-between;
+}
+.codepromo2{
+    display: flex;
+}
+#email{
+    display: block;
+    border: 1px solid black;
+    background-color: white;
+    width: 200px;
+    height: 40px;
+    padding-left: 5px;
+}
+.submitemail{
+    border: 1px solid black;
+    height: 42px;
+    width: 42px;
+    background-color: black;
+    color: white;
+}
+.foo{
+    width: 100%;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+}
+.boxes{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-around;
+    line-height: 30px;
+}
 
 /* 
 Tariq Ali Changes 
@@ -490,80 +539,4 @@ ul li:hover ul li {
     100% {
         opacity: 1.0;
     }
-}
-
-
-/*------cart Items ---*/
-
-.cart-page {
-    margin: 80px 80px auto;
-    align-items: center;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.cart-info {
-    direction: flex;
-    flex-wrap: wrap;
-    font-size: 12pt;
-}
-
-.cart-info img {
-    height: 100px;
-    width: 100px;
-}
-
-th {
-    padding: 5px;
-    color: black;
-    background: #ebedee;
-    font-size: 16pt;
-    text-align: center;
-}
-
-td {
-    padding: 10px 5px;
-}
-
-td input {
-    width: 40px;
-    height: 30px;
-    padding: 5px;
-}
-
-td a {
-    color: #7a7f81;
-    font-size: 16px;
-}
-
-td img {
-    width: 80px;
-    height: 80px;
-    margin-right: 10px;
-}
-
-.total-price {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.total-price table {
-    border-top: 3px solid#7a7f81;
-    width: 100%;
-    max-width: 350px;
-}
-
-td:last-child {
-    text-align: right;
-}
-
-th:last-child {
-    text-align: right;
-}
-
-.errorText {
-    color: red;
 }
