@@ -4,18 +4,28 @@ var counter = 0;
 var inst = setInterval(change, 4000);
 
 function change() {
+<<<<<<< HEAD
     document.getElementById("changeBanner").innerHTML = text[counter];
     counter++;
     if (counter >= text.length) {
         counter = 0;
     }
 }
+=======
+  document.getElementById("changeBanner").innerHTML = text[counter];
+  counter++;
+  if (counter >= text.length) {
+    counter = 0;
+  }
+};
+>>>>>>> 04c057c94e85f147bc16c440530160fb6eee6c7e
 
 /* function for header slideshow */
 var slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
+<<<<<<< HEAD
     showSlides(slideIndex += n);
 }
 
@@ -33,6 +43,25 @@ function showSlides(n) {
     }
     //slides[slideIndex - 1].style.display = "block";
 }
+=======
+  showSlides(slideIndex += n);
+};
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+};
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block";  
+};
+>>>>>>> 04c057c94e85f147bc16c440530160fb6eee6c7e
 
 /* change mode light/dark */
 
@@ -40,12 +69,22 @@ function changemode(mode) {
 
     if (mode == light) {
         document.getElementsByTagName("body")[0].style.backgroundColor = "white";
+<<<<<<< HEAD
         document.getElementsByTagName("body")[0].style.Color = "black";
     } else {
         document.getElementsByTagName("body")[0].style.backgroundColor = "black";
         document.getElementsByTagName("body")[0].style.color = "white";
     }
 }
+=======
+        document.getElementsByTagName("body")[0].style.color ="black";
+    }
+    else{
+        document.getElementsByTagName("body")[0].style.backgroundColor = "black";
+        document.getElementsByTagName("body")[0].style.color = "white";
+    }
+  };
+>>>>>>> 04c057c94e85f147bc16c440530160fb6eee6c7e
 
 /*chat window */
 
@@ -53,11 +92,16 @@ function openForm() {
     document.getElementById("myForm").style.display = "block";
     document.getElementById("open-button").style.display = "none";
 
+<<<<<<< HEAD
 }
+=======
+  };
+>>>>>>> 04c057c94e85f147bc16c440530160fb6eee6c7e
 
 function closeForm() {
     document.getElementById("open-button").style.display = "block";
     document.getElementById("myForm").style.display = "none";
+<<<<<<< HEAD
 }
 /*cart items*/
 /*calculate the total for each item*/
@@ -145,3 +189,15 @@ $(document).ready(function() {
         $(".cart-line3").remove();
     });
 });
+=======
+  };
+
+  /* form index page*/
+  function checkin(){
+    if (document.getElementById("email").value != ""){
+     var youremail = document.getElementById("email").value;
+     alert("Thank You for signing up. \n We sent the Promocode to " + youremail + " \n enjoy your christmas shopping with 8117-TEAM" );
+     document.getElementById("email").innerHTML = "";
+  }
+};
+>>>>>>> 04c057c94e85f147bc16c440530160fb6eee6c7e

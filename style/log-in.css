@@ -54,19 +54,6 @@
   margin: auto;
 }
 
-* {
-  box-sizing: border-box;
-} 
-
-body {
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 100vh;
-  margin: 0;
-}
-
 .forms {
   background-color: lightgray;
   border-radius: 5px;
@@ -169,50 +156,17 @@ form {
   width: 100%;
   text-align: right;
 }
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
 
-@-webkit-keyframes fade {
-  from {
-      opacity: .4
-  }
-  to {
-      opacity: 1
-  }
-}
-
-@keyframes fade {
-  from {
-      opacity: .4
-  }
-  to {
-      opacity: 1
-  }
+.HOME, .CLOTHES, .SHOES, .ACCESSORIES {
+  float: left;
+  list-style-type: none;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: white;
+  border: none;
 }
 
 ul {
@@ -235,7 +189,10 @@ button {
   border: none;
 }
 
-li a:hover:not(.active) {
+li a:hover:not(.active),
+.HOME:hover:not(.active), .CLOTHES:hover:not(.active), 
+.SHOES:hover:not(.active), .ACCESSORIES:hover:not(.active)
+{
   background-color: lightgrey;
 }
 
@@ -260,28 +217,23 @@ body {
 
 
 /* The popup chat - hidden by default */
-
 .chat-popup {
   display: none;
   position: fixed;
   bottom: 0;
   right: 15px;
   border: 3px solid #f1f1f1;
+  border-radius: 20px;
   z-index: 9;
+  width: 20%;
 }
-
-
 /* Add styles to the form container */
-
 .form-container {
-  max-width: 300px;
   padding: 10px;
   background-color: white;
+  border-radius: 20px;
 }
-
-
 /* Full-width textarea */
-
 .form-container textarea {
   width: 80%;
   padding: 15px;
@@ -289,157 +241,32 @@ body {
   border: none;
   background: #f1f1f1;
   resize: none;
-  min-height: 200px;
+  min-height: 100px;
+  border-radius: 20px;
 }
-
-
 /* When the textarea gets focus, do something */
-
 .form-container textarea:focus {
-  background-color: #ddd;
+  background-color: white;
   outline: none;
 }
-
-
 /* Set a style for the submit/send button */
-
 .form-container .btn {
-  background-color: #4CAF50;
+  background-color: #63b666;
   color: white;
   padding: 16px 20px;
   border: none;
+  border-radius: 20px;
   cursor: pointer;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom:10px;
   opacity: 0.8;
 }
-
-
-/* Add a red background color to the cancel button */
-
+/* Add a background color to the cancel button */
 .form-container .cancel {
-  background-color: red;
+  background-color: black;
+  border-radius: 20px;
 }
-
-
 /* Add some hover effects to buttons */
-
-.form-container .btn:hover,
-.open-button:hover {
+.form-container .btn:hover, .open-button:hover {
   opacity: 1;
-}
-
-
-/* 
-Tariq Ali Changes 
-*/
-
-.categories {
-  text-align: center;
-  padding: 20px;
-  margin: 20px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.categories div {
-  border: 1px solid black;
-  padding: 10px;
-  border-radius: 30px;
-}
-
-.prodSize {
-  width: auto;
-  height: auto;
-}
-
-ul li ul li {
-  list-style-type: none;
-  display: none;
-}
-
-ul li:hover ul li {
-  list-style-type: none;
-  display: block;
-}
-
-.card {
-  position: relative;
-  overflow: hidden;
-}
-
-.card:before {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 220%;
-  top: -50%;
-  left: -100%;
-  z-index: 1;
-  background-color: rgba(61, 230, 108, 0.387);
-  transform: rotate(0deg);
-  transform-origin: center top 2;
-  transition: .5s;
-}
-
-.card:hover::before {
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
-}
-
-.card img {
-  width: 100%;
-  height: auto;
-}
-
-.card-text {
-  width: 100%;
-  padding: 0 20px;
-  position: absolute;
-  top: -100%;
-  background-color: rgba(255, 255, 255, 0.592);
-  color: rgb(8, 1, 1);
-  left: 0;
-  z-index: 1;
-  transition: 1.1s;
-}
-
-.card:hover .card-text {
-  top: 100px;
-}
-
-.btn-success:hover {
-  background-color: rgb(189, 90, 90);
-  color: chocolate;
-}
-
-.blink {
-  animation-name: blinker;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-.blink:hover {
-  animation-play-state: paused;
-  cursor: pointer;
-}
-
-.spanBlink {
-  font-size: 20px;
-  background-color: rgba(61, 230, 108, 0.387);
-}
-
-@keyframes blinker {
-  0% {
-      opacity: 1.0;
-  }
-  50% {
-      opacity: 0.0;
-  }
-  100% {
-      opacity: 1.0;
-  }
 }
