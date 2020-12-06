@@ -61,7 +61,7 @@ function closeForm() {
 }
 /*cart items*/
 /*calculate the total for each item*/
-$("#header").html($('<h3></h3>').text("Working With Jquery"));
+
 
 function calcSum() {
     var total = 0;
@@ -92,3 +92,8 @@ function inputClick(e) {
     console.log(e.value);
     calcSum();
 }
+$(document).ready(function() {
+    $("#remove").on("click", function() {
+        $("cart-line").remove();
+    });
+});
