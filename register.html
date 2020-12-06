@@ -12,46 +12,67 @@
 <body>
     <div class="container">
         <div class="stickyheader">
+
             <div class="banner" id="changeBanner">
                 Free shipping for orders over 100$
             </div>
 
             <div class="mode">
-                <button id="light" type="light" onclick="changemode(light)">Light</button>
-                <button id="dark" type="dark" onclick="changemode(dark)">Dark</button>
+                <div class="smode">
+                    <button id="light" class="light" onclick="changemode(light)">Light</button>
+                    <button id="dark" class="dark" onclick="changemode(dark)">Dark</button>
+                </div>
+
+                <div class="smenu">
+
+                    <a href="register.html">Register</a>
+                    <a href="logIn.html">Log In</a>
+                    <a href="cart.html">Cart</a>
+                </div>
+
             </div>
 
             <div class="myheader">
 
                 <div class="logo">
-                    <a href="index1.html"><img src="images/logo1 - Copy.png" alt="our Logo" id="logo"></a>
+                    <img src="images/logo1 - Copy.png" alt="our Logo" id="logo">
                 </div>
-                <div class="header">
-                    <ul>
-                        <li class=""><a href="clothes.html">CLOTHES</a></li>
-                        <li class=""><a href="Shoes.html">SHOES</a></li>
-                        <li class=""><a href="accessories.html">ACCESSORIES</a></li>
-                    </ul>
-                </div>
-                <div class="subheader" id="subheader">
-                    <ul>
-                        <li class="searchArea1">
-                            <form action="" id="searchForm1">
-                                <input type="search" class="searchInput">
-                                <i class="fa fa-search"></i>
-                            </form>
-                        </li>
-                        <li class="registration"><a href="register.html">Register</a></li>
-                        <li class="logIn"><a href="logIn.html">Log In</a></li>
-                        <li class="cart"><a href="cart.html">Cart</a></li>
-                    </ul>
 
+                <div class="header">
+
+                    <div class=""> <a href="index1.html">HOME</a></div>
+                    <div class=""><a href="clothes.html">CLOTHES</a></div>
+                    <div class=""><a href="Shoes.html">SHOES</a></div>
+                    <div class=""><a href="accessories.html">ACCESSORIES</a></div>
+
+                </div>
+
+                <div class="searchArea">
+                    <form id="searchForm">
+                        <input type="search" id="searchinput">
+                        <i class="fa fa-search"></i>
+                    </form>
                 </div>
 
             </div>
         </div>
     </div>
 
+
+    <button class="open-button" id="open-button" onclick="openForm()">CHAT TO AN EXPERT <br> let us know how we can
+        help!</button>
+
+    <div class="chat-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>Chat</h1>
+
+            <label for="msg"><b></b></label>
+            <textarea placeholder="Type message.." name="msg" id="msg" required></textarea>
+
+            <button type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
 
     <main>
         <div class="container1">
