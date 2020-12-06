@@ -10,6 +10,7 @@ console.log(sessionStorage.getItem('name'))
 
 document.cookie = 'name=Cookies; expires=' + new Date(2020,0,10).toUTCString()
 document.cookie = 'lastName=albadry; expires=' + new Date(2020,0,10).toUTCString()
+document.cookie = 'lastName=IEatCokies; expires=' + new Date(2020,0,10).toUTCString()
 
 console.log(document.cookie)
 
@@ -19,27 +20,6 @@ Cookies2.set('cookies', 'true')
 
 document.cookie = 'name=; expires=' + new Date(2020,0,10).toUTCString()
 
-Cookies.set('name', 'value', { secure: true })
-Cookies.get('name') // => 'value'
+Cookies.set('name', 'true', { secure: true })
+Cookies.get('name') // => 'true'
 Cookies.remove('name')
-
-document.cookie = 'escaped=%u5317'
-document.cookie = 'default=%E5%8C%97'
-var cookies = Cookies.withConverter({
-  read: function (value, name) {
-    if (name === 'escaped') {
-      return unescape(value)
-    }
-    // Fall back to default for all other cookies
-    return Cookies.converter.read(value, name)
-  }
-})
-cookies.get('escaped') // 北
-cookies.get('default') // 北
-cookies.get() // { escaped: '北', default: '北' }
-
-Cookies.withConverter({
-    write: function (value, name) {
-      return value.toUpperCase()
-    }
-  })

@@ -79,16 +79,6 @@ function setSuccessFor(input) {
   formControl.className = 'form-control success';
 }
 
-/* change mode light/dark */
-
-function changemode(mode) {
-
-  if (mode == light) {
-      document.getElementsByTagName("body")[0].style.backgroundColor = "white";
-  } else {
-      document.getElementsByTagName("body")[0].style.backgroundColor = "black";
-  }
-}
 
 /*chat window */
 
