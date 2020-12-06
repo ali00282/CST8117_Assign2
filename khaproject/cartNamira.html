@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8117-Team Canada</title>
+    <link rel="stylesheet" href="cart.css">
+    <script src="jquery-3.5.1.js"></script>
+    <script src="code.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="stickyheader">
+
+            <div class="banner" id="changeBanner">
+                Free shipping for orders over 100$
+            </div>
+
+            <div class="mode">
+                <div class="smode">
+                    <button id="light" class="light" onclick="changemode(light)">Light</button>
+                    <button id="dark" class="dark" onclick="changemode(dark)">Dark</button>
+                </div>
+
+                <div class="smenu">
+
+                    <a href="register.html">Register</a>
+                    <a href="logIn.html">Log In</a>
+                    <a href="cart.html">Cart</a>
+                </div>
+
+            </div>
+
+            <div class="myheader">
+
+                <div class="logo">
+                    <img src="images/logo1 - Copy.png" alt="our Logo" id="logo">
+                </div>
+
+                <div class="header">
+
+                    <div class=""> <a href="index1.html">HOME</a></div>
+                    <div class=""><a href="clothes.html">CLOTHES</a></div>
+                    <div class=""><a href="Shoes.html">SHOES</a></div>
+                    <div class=""><a href="accessories.html">ACCESSORIES</a></div>
+
+                </div>
+
+                <div class="searchArea">
+                    <form id="searchForm">
+                        <input type="search" id="searchinput">
+                        <i class="fa fa-search"></i>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    <main>
+        <div class="small-container cart-page">
+            <table>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+                <tr class="cart-line1">
+                    <td>
+                        <div class="cart-info">
+                            <img src="pexels-evg-culture-1040427.jpg" alt="Running Shoes" id="Running">
+                            <div>
+                                <p>Runnning Shoes</p>
+                                <small>Price : 120.00$</small></br>
+                                <button id="remove1">Remove</button>
+                            </div>
+                        </div>
+                    </td>
+                    <td><input id="q1" type="number" value="" min="0"></td>
+                    <td id="p1"></td>
+                </tr>
+                <tr class="cart-line2">
+                    <td>
+                        <div class="cart-info ">
+                            <img src="pexels-evg-culture-1040427.jpg" alt="T-shirt" id="T-Shirt">
+                            <div>
+                                <p>T-shirt</p>
+                                <small>Price : 30.00$</small></br>
+                                <button id="remove2">Remove</button>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td><input id="q2" type="number" value="" min="0"></td>
+                    <td id="p2"></td>
+                </tr>
+                <tr class="cart-line2">
+                    <td>
+                        <div class="cart-info ">
+                            <img src="pexels-evg-culture-1040427.jpg" alt="ball" id="ball">
+                            <div>
+                                <p>ball</p>
+                                <small>Price : 50.00$</small></br>
+                                <button id="remove3">Remove</button>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td><input id="q3" type="number" value="" min="0"></td>
+                    <td id="p3"></td>
+                </tr>
+
+            </table>
+            <div class="total-price ">
+                <table>
+                    <tr>
+                        <td>Subtotal</td>
+                        <td id="sub"></td>
+                    </tr>
+                    <tr>
+                        <td>Tax</td>
+                        <td id="tx"></td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td id="tot"></td>
+                    </tr>
+                </table>
+            </div>
+
+    </main>
+
+
+
+    <footer>
+        <div class="subfooter">
+            <div class="subfoo">
+
+                <div class="title">
+
+                    <p> Our Story </p>
+                    <p> Our Vision</p>
+
+                </div>
+                <div class="story">
+                    <p>He ordered his regular breakfast. Two eggs and cheese sandwich, hash browns, and two strips of bacon. He continued to look at the menu wondering if this would be the day he added something new. This was also part of the routine. A
+                        few seconds of hesitation to see if something else would be added to the order before demuring and saying that would be all. It was the same exact meal that he had ordered every day for the past two years. He ordered his regular
+                        breakfast. Two eggs and cheese sandwich, hash browns, and two strips of bacon. He continued to look at the menu wondering if this would be the day he added something new. This was also part of the routine. A few seconds of hesitation
+                        to see if something else would be added to the order before demuring and saying that would be all. It was the same exact meal that he had ordered every day for the past two years.</p>
+                    <p>It wasn't quite yet time to panic. There was still time to salvage the situation. At least that is what she was telling himself. The reality was that it was time to panic and there wasn't time to salvage the situation, but he continued
+                        to delude himself into believing there was. It wasn't quite yet time to panic. There was still time to salvage the situation. At least that is what she was telling himself. The reality was that it was time to panic and there wasn't
+                        time to salvage the situation, but he continued to delude himself into believing there was.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div class="codepromo">
+                <p>SIGN UP FOR NEWS & GET 10% OFF</p>
+                <div class="codepromo2" id="formindex">
+
+                    <input type="text" id="email" name="email" placeholder="Your Email" required>
+                    <button class="submitemail" onclick="checkin()">@</button>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="foo">
+
+            <div class="boxes">
+
+                <div class="box1">
+                    Customer Services <br> Privacy Policy<br> Return Policy<br> Shipping <br> Order Tracker
+                </div>
+
+                <div>
+                    <a href="https://www.facebook.com/">Facebook</a> <br>
+                    <a href="https://twitter.com/">Twitter </a><br>
+                    <a href="https://www.instagram.com/">Instagram</a> <br>
+                    <a href="https://www.pinterest.ca/">Pinterest</a> <br>
+                </div>
+
+                <div class="box2">
+                    Email us: <br>
+                    <a href="mailto:DIY@8117-Team.ca?subject=inquiry%20from%20website">
+                        8117-Team@algonquin.ca</a> <br> Fax : (613) 000-0000 <br> Phone Number : (613) 123 4567
+                </div>
+
+            </div>
+        </div>
+        <div class="thankyou">
+            Copyright 2020 © All Rights Reserved | This website is owned by "Namira, Pattol, Tariq, Khadija" | Our gratitude to you for all you have done Professor Frank
+        </div>
+    </footer>
+
+    <script src="script/code.js"></script>
+</body>
+
+</html>

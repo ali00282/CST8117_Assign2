@@ -11,8 +11,7 @@
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- our code for the cart -->
-    <script src="code.js"></script>
+
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
@@ -80,65 +79,66 @@
                     <th>Quantity</th>
                     <th>Subtotal</th>
                 </tr>
-                <tr class="cart-line">
+                <tr class="cart-line1">
                     <td>
                         <div class="cart-info">
                             <img src="images/shoes/pexels-photo.jpg" alt="accessories1">
                             <div>
                                 <p>Red Shoes</p>
-                                <small>Price : 50.00$</small></br>
-                                <button id="remove">Remove</button>
+                                <small id="price">Price : 50.00</small></br>
+                                <button id="remove1">Remove</button>
                             </div>
                         </div>
                     </td>
-                    <td><input id="q-1" type="number " onclick="inputClick(this) " value="1 " min="1 "></td>
-                    <td id="p-1">$50.00</td>
-                </tr>
-                <tr>
                     <td>
-                        <div class="cart-info ">
-                            <img src="images/shoes/pexels-photo.jpg " alt="accessories1 ">
+                        <input id="q-1" type="number" onclick="inputClick(this)" value="1" min="1"></td>
+                    <td id="p-1">50</td>
+                </tr>
+                <tr class="cart-line2">
+                    <td>
+                        <div class="cart-info">
+                            <img src="images/shoes/pexels-photo.jpg" alt="accessories1">
                             <div>
                                 <p>Red Shoes</p>
-                                <small>Price : 50.00$</small></br>
-                                <a href=" ">Remove</a>
+                                <small id="price">Price : 50.00</small></br>
+                                <button id="remove2">Remove</button>
                             </div>
                         </div>
                     </td>
 
-                    <td><input id="q-2" type="number " onclick="inputClick(this) " value="1 " min="1 "></td>
-                    <td id="p-2">$50.00</td>
+                    <td><input id="q-2" type="number" onclick="inputClick(this)" value="1" min="1"></td>
+                    <td id="p-2">50</td>
                 </tr>
-                <tr>
+                <tr class="cart-line3">
                     <td>
-                        <div class="cart-info ">
-                            <img src="images/shoes/pexels-photo.jpg " alt="accessories1 ">
+                        <div class="cart-info">
+                            <img src="images/shoes/pexels-photo.jpg " alt="accessories1">
                             <div>
                                 <p>Red Shoes</p>
-                                <small>Price : 50.00$</small></br>
-                                <a href=" ">Remove</a>
+                                <small id="price">Price : 50.00</small></br>
+                                <button id="remove3">Remove</button>
                             </div>
                         </div>
                     </td>
 
-                    <td><input id="q-3" type="number " onclick="inputClick(this) " value="1 " min="1 "></td>
-                    <td id="p-3">$50.00</td>
+                    <td><input id="q-3" type="number" onclick="inputClick(this)" value="1" min="1"></td>
+                    <td id="p-3">50</td>
                 </tr>
 
             </table>
-            <div class="total-price ">
+            <div class="total-price">
                 <table>
                     <tr>
                         <td>Subtotal</td>
-                        <td id="sub ">200.00$</td>
+                        <td id="sub">200.00$</td>
                     </tr>
                     <tr>
                         <td>Tax</td>
-                        <td id="tx ">35.00$</td>
+                        <td id="tx">35.00$</td>
                     </tr>
                     <tr>
                         <td>Total</td>
-                        <td id="tot ">230.00$</td>
+                        <td id="tot">230.00$</td>
                     </tr>
                 </table>
             </div>
@@ -149,7 +149,7 @@
 
 
     <footer>
-        <div class=" subfooter ">
+        <div class="subfooter">
             <table>
                 <tr class=" title ">
                     <td></td>
@@ -166,7 +166,8 @@
             <div class=" FollowUs ">Follow Us</div>
         </div>
     </footer>
-
+    <!-- our code for the cart -->
+    <script src="code.js"></script>
 
 
 </body>

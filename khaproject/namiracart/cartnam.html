@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8117-Team Canada</title>
+    <link rel="stylesheet" href="cartnam.css">
+    <script src="jquery-3.5.1.js"></script>
+    <script src="cart.js"></script>
+</head>
+
+<body>
+    <main>
+        <div class="small-container cart-page">
+            <table>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+                <tr class="cart-line1">
+                    <td>
+                        <div class="cart-info">
+                            <img src="pexels-evg-culture-1040427.jpg" alt="Running Shoes" id="Running">
+                            <div>
+                                <p>Runnning Shoes</p>
+                                <small>Price : 120.00$</small></br>
+                                <button id="remove1">Remove</button>
+                            </div>
+                        </div>
+                    </td>
+                    <td><input id="q1" type="number" value="" min="0"></td>
+                    <td id="p1"></td>
+                </tr>
+                <tr class="cart-line2">
+                    <td>
+                        <div class="cart-info ">
+                            <img src="pexels-evg-culture-1040427.jpg" alt="T-shirt" id="T-Shirt">
+                            <div>
+                                <p>T-shirt</p>
+                                <small>Price : 30.00$</small></br>
+                                <button id="remove2">Remove</button>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td><input id="q2" type="number" value="" min="0"></td>
+                    <td id="p2"></td>
+                </tr>
+                <tr class="cart-line2">
+                    <td>
+                        <div class="cart-info ">
+                            <img src="pexels-evg-culture-1040427.jpg" alt="ball" id="ball">
+                            <div>
+                                <p>ball</p>
+                                <small>Price : 50.00$</small></br>
+                                <button id="remove3">Remove</button>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td><input id="q3" type="number" value="" min="0"></td>
+                    <td id="p3"></td>
+                </tr>
+
+            </table>
+            <div class="total-price ">
+                <table>
+                    <tr>
+                        <td>Subtotal</td>
+                        <td id="sub"></td>
+                    </tr>
+                    <tr>
+                        <td>Tax</td>
+                        <td id="tx"></td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td id="tot"></td>
+                    </tr>
+                </table>
+            </div>
+
+    </main>
+
+    <script src="codecart.js"></script>
+</body>
+
+</html>
