@@ -15,6 +15,46 @@
     display: flex;
     justify-content: space-between;
 }
+@media screen and (max-width: 600px) {
+    .banner{
+        font-size: 9px;
+        font-weight: normal;
+    }
+    .myheader{
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header{
+        flex-direction: column;
+        padding-right: 0px;
+        width: 50%;
+        text-align: center;
+    }
+    .smode{
+        width: 30%;
+    }
+    .smenu{
+        width: 70%;
+        justify-content: space-between;
+        text-align: right;
+    }
+    #logo{
+        display: none;
+    }
+    .story p{
+        text-align: left;
+    }
+    .codepromo{
+        font-size: 14px;
+        flex-direction: column;
+    }
+    .foo{
+        font-size: 12px;
+    }
+    .thankyou{
+        font-size: 11px;
+    }
+}
 .stickyheader{
     position: sticky;
     top: 0;
@@ -36,13 +76,11 @@
 }
 .smode{
     display: flex;
-    width: 70%;
 }
 .smenu{
     display: flex;
-    justify-content: flex-end;
-    width: 30%;
     align-items: center;
+    justify-content: stretch;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 13px;
     text-decoration: none;
@@ -88,6 +126,7 @@
     padding-top: 50px;
     width: 20%;
 }
+
 #searchForm{
     position: relative;
     top: 50%;
