@@ -1,3 +1,88 @@
+/*------cart Items ---*/
+
+@media only screen and (max-width:100px) {
+    /* For mobile phones: */
+    table,
+    .cart-info1,
+    .cart-info2,
+    .cart-info3,
+    .total-price table {
+        width: 100%;
+    }
+}
+
+.cart-page {
+    margin: 80px 80px auto;
+    align-items: center;
+}
+
+table {
+    margin-left: 20px;
+    width: 60%;
+    border-collapse: collapse;
+}
+
+.cart-info {
+    direction: flex;
+    flex-wrap: wrap;
+    font-size: 10pt;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+}
+
+th {
+    padding: 5px;
+    color: black;
+    background: #ebedee;
+    font-size: 14pt;
+    text-align: center;
+}
+
+td {
+    padding: 10px 5px;
+}
+
+td input {
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+
+td a {
+    color: #7a7f81;
+    font-size: 16px;
+}
+
+td img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.total-price {
+    display: flex;
+}
+
+.total-price table {
+    border-top: 3px solid#7a7f81;
+    width: 60%;
+    max-width: 350px;
+}
+
+td:last-child {
+    text-align: left;
+}
+
+th:last-child {
+    text-align: left;
+}
+
+
+/*css for other pages*/
+
 * {
     margin: 0;
     padding: 0;
@@ -483,7 +568,7 @@ li a:hover:not(.active) {
     display: flex;
 }
 
-.signupEmail {
+#email {
     display: block;
     border: 1px solid black;
     background-color: white;
@@ -521,7 +606,6 @@ Tariq Ali Changes
 */
 
 .categories {
-    width: 90%;
     text-align: center;
     padding: 20px;
     margin: 20px;
@@ -531,6 +615,7 @@ Tariq Ali Changes
 
 .categories div {
     border: 1px solid black;
+    padding: 10px;
     border-radius: 30px;
 }
 

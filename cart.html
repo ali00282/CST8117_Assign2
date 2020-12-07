@@ -2,74 +2,63 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Cart</title>
-    <link rel="stylesheet" href="index1.css">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Cart</title>
+    <link rel="stylesheet" href="style/cart_1.css">
+    <link rel="stylesheet" href="style/index1.css">
+    <script src="script/jquery-3.5.1.js" required></script>
 </head>
 
 <body>
     <div class="container">
+        <div class="stickyheader">
 
-        <div class="banner" id="changeBanner">
-            Free shipping for orders over 100$
-        </div>
-
-        <div class="myheader">
-            <div class="logo">
-                <a href="index1.html"><img src="images/logo1.png" alt="our Logo" id="logo"></a>
+            <div class="banner" id="changeBanner">
+                Free shipping for orders over 100$
             </div>
-            <div class="header">
-                <ul>
-                    <li>Categories
-                        <ul>
-                            <li>
-                                <a href="Shoes.html">Shoes</a>
-                            </li>
-                            <li>
-                                <a href="clothes.html">Clothes</a>
-                            </li>
-                            <li>
-                                <a href="accessories.html">Accessories</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <li class="sales"><a href="sales.html">Sales</a></li>
-                <li class="searchArea"><a href="search">Search</a></li>
-                <li class="cart"><a href="cart.html">Cart</a></li>
-                <li class="cart-item"><a href="cart">0</a>
-                    </ul>
-            </div>
-            <div class="subheader" id="subheader">
-                <ul>
 
-                    <li class="registration"><a href="register">Register</a></li>
-                    <li class="logIn"><a href="log">Log In</a></li>
-                    <li>
-                        <select name="languages" id="languages">
-                            <option value="languageFr">Fr</option>
-                            <option value="languageEn">En</option>
-                        </select>
-                    </li>
-                    <li> <button id="light" type="light" onclick=" changemode(light) ">Light</button> </li>
-                    <li> <button id="dark" type="dark" onclick=" changemode(dark) ">Dark</button> </li>
-                </ul>
+            <div class="mode">
+                <div class="smode">
+                    <button id="light" class="light" onclick="changemode(light)">Light</button>
+                    <button id="dark" class="dark" onclick="changemode(dark)">Dark</button>
+                </div>
+
+                <div class="smenu">
+
+                    <a href="register.html">Register</a>
+                    <a href="logIn.html">Log In</a>
+                    <a href="cart.html">Cart</a>
+                </div>
 
             </div>
 
+            <div class="myheader">
+
+                <div class="logo">
+                    <img src="images/logo1 - Copy.png" alt="our Logo" id="logo">
+                </div>
+
+                <div class="header">
+
+                    <div class=""> <a href="index1.html">HOME</a></div>
+                    <div class=""><a href="clothes.html">CLOTHES</a></div>
+                    <div class=""><a href="Shoes.html">SHOES</a></div>
+                    <div class=""><a href="accessories.html">ACCESSORIES</a></div>
+
+                </div>
+
+                <div class="searchArea">
+                    <form id="searchForm">
+                        <input type="search" id="searchinput">
+                        <i class="fa fa-search"></i>
+                    </form>
+                </div>
+
+            </div>
         </div>
     </div>
-
-
     <main>
         <div class="small-container cart-page">
             <table>
@@ -78,108 +67,138 @@
                     <th>Quantity</th>
                     <th>Subtotal</th>
                 </tr>
-                <tr>
+                <tr class="cart-line1">
                     <td>
                         <div class="cart-info">
-                            <img src="images/shoes/pexels-photo.jpg" alt="accessories1">
+                            <img src="images/shoes.jpg" alt="Running Shoes" id="Running">
                             <div>
-                                <p>Red Shoes</p>
-                                <small>Price : 50.00$</small></br>
-                                <a href="">Remove</a>
+                                <p>Runnning Shoes</p>
+                                <small>Price : 120.00$</small></br>
+                                <button id="remove1">Remove</button>
                             </div>
                         </div>
                     </td>
-
-                    <td><input id="q-1" type="number" onclick="inputClick(this)" value="1"></td>
-                    <td id="p-1">$50.00</td>
+                    <td><input id="q1" type="number" value="0" min="0"></td>
+                    <td id="p1"></td>
                 </tr>
-                <tr>
+                <tr class="cart-line2">
                     <td>
-                        <div class="cart-info">
-                            <img src="images/shoes/pexels-photo.jpg" alt="accessories1">
+                        <div class="cart-info ">
+                            <img src="images/hoodie.jpg" alt="T-shirt" id="T-Shirt">
                             <div>
-                                <p>Red Shoes</p>
-                                <small>Price : 50.00$</small></br>
-                                <a href="">Remove</a>
+                                <p>Hoodie</p>
+                                <small>Price : 30.00$</small></br>
+                                <button id="remove2">Remove</button>
                             </div>
                         </div>
                     </td>
 
-                    <td><input id="q-2" type="number" onclick="inputClick(this)" value="1"></td>
-                    <td id="p-2">$50.00</td>
+                    <td><input id="q2" type="number" value="0" min="0"></td>
+                    <td id="p2"></td>
                 </tr>
-                <tr>
+                <tr class="cart-line3">
                     <td>
-                        <div class="cart-info">
-                            <img src="images/shoes/pexels-photo.jpg" alt="accessories1">
+                        <div class="cart-info ">
+                            <img src="images/ball.jpeg" alt="ball" id="ball">
                             <div>
-                                <p>Red Shoes</p>
+                                <p>ball</p>
                                 <small>Price : 50.00$</small></br>
-                                <a href="">Remove</a>
+                                <button id="remove3">Remove</button>
                             </div>
                         </div>
                     </td>
 
-                    <td><input id="q-3" type="number" onclick="inputClick(this)" value="1"></td>
-                    <td id="p-3">$50.00</td>
+                    <td><input id="q3" type="number" value="0" min="0"></td>
+                    <td id="p3"></td>
                 </tr>
 
             </table>
-            <div class="total-price">
+            <div class="total-price ">
                 <table>
                     <tr>
                         <td>Subtotal</td>
-                        <td id="sub">200.00$</td>
+                        <td id="sub"></td>
                     </tr>
                     <tr>
                         <td>Tax</td>
-                        <td id="tx">35.00$</td>
+                        <td id="tx"></td>
                     </tr>
                     <tr>
                         <td>Total</td>
-                        <td id="tot">230.00$</td>
+                        <td id="tot"></td>
                     </tr>
                 </table>
             </div>
 
-
-
     </main>
-    <button class=" open-button " id=" open-button " onclick=" openForm() ">Chat</button>
-
-    <div class=" chat-popup " id=" myForm ">
-        <form action=" /action_page.php " class=" form-container ">
-            <h1>Chat</h1>
-
-            <label for=" msg "><b></b></label>
-            <textarea placeholder=" Type message.. " name=" msg " required></textarea>
-
-            <button type=" submit " class=" btn ">Send</button>
-            <button type=" button " class=" btn cancel " onclick=" closeForm() ">Close</button>
-        </form>
-    </div>
 
     <footer>
-        <div class=" subfooter ">
-            <table>
-                <tr class=" title ">
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr class=" story ">
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
+        <div class="subfooter">
+            <div class="subfoo">
+
+
+                <div class="title">
+
+                    <p> Our Story </p>
+                    <p> Our Vision</p>
+
+                </div>
+                <div class="story">
+                    <p>He ordered his regular breakfast. Two eggs and cheese sandwich, hash browns, and two strips of bacon. He continued to look at the menu wondering if this would be the day he added something new. This was also part of the routine. A
+                        few seconds of hesitation to see if something else would be added to the order before demuring and saying that would be all. It was the same exact meal that he had ordered every day for the past two years. He ordered his regular
+                        breakfast. Two eggs and cheese sandwich, hash browns, and two strips of bacon. He continued to look at the menu wondering if this would be the day he added something new. This was also part of the routine. A few seconds of hesitation
+                        to see if something else would be added to the order before demuring and saying that would be all. It was the same exact meal that he had ordered every day for the past two years.</p>
+                    <p>It wasn't quite yet time to panic. There was still time to salvage the situation. At least that is what she was telling himself. The reality was that it was time to panic and there wasn't time to salvage the situation, but he continued
+                        to delude himself into believing there was. It wasn't quite yet time to panic. There was still time to salvage the situation. At least that is what she was telling himself. The reality was that it was time to panic and there wasn't
+                        time to salvage the situation, but he continued to delude himself into believing there was.</p>
+                </div>
+            </div>
         </div>
-        <div class=" footer ">
-            <div class=" contact ">Contact Us</div>
-            <div class=" FollowUs ">Follow Us</div>
+
+        <div class="bottom">
+            <div class="codepromo">
+                <p>SIGN UP FOR NEWS & GET 10% OFF</p>
+                <div class="codepromo2" id="formindex">
+
+                    <input type="text" id="email" name="email" placeholder="Your Email" required>
+                    <button class="submitemail" onclick="checkin()">@</button>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="foo">
+
+            <div class="boxes">
+
+                <div class="box1">
+                    Customer Services <br> Privacy Policy<br> Return Policy<br> Shipping <br> Order Tracker
+                </div>
+
+                <div>
+                    <a href="https://www.facebook.com/">Facebook</a> <br>
+                    <a href="https://twitter.com/">Twitter </a><br>
+                    <a href="https://www.instagram.com/">Instagram</a> <br>
+                    <a href="https://www.pinterest.ca/">Pinterest</a> <br>
+                </div>
+
+
+
+                <div class="box2">
+                    Email us: <br>
+                    <a href="mailto:DIY@8117-Team.ca?subject=inquiry%20from%20website">
+                        8117-Team@algonquin.ca</a> <br> Fax : (613) 000-0000 <br> Phone Number : (613) 123 4567
+                </div>
+
+            </div>
+        </div>
+        <div class="thankyou">
+            Copyright 2020 © All Rights Reserved | This website is owned by "Namira, Pattol, Tariq, Khadija" | Our gratitude to you for all you have done Professor Frank
         </div>
     </footer>
-
-
-    <script src=" code.js "></script>
+    <script src="script/cart.js"></script>
+    <script src="script/codecart.js"></script>
+    <script src="script/code.js"></script>
 </body>
 
 
